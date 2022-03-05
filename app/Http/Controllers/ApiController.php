@@ -22,10 +22,8 @@ class ApiController extends Controller
                 'nombre' => $personaje['name'],
                 'descripcion' => $personaje['description'],
                 'modificado' => $personaje['modified'],
-                'imagen' => $personaje{
-                    ['thumbnail']['path'].
-                    ['thumbnail']['extension']
-                }
+                'thumbnail_path' => $personaje['thumbnail']['path'],
+                'thumbnail_extension' => $personaje['thumbnail']['extension']
                 /* :{
                     'path' => $personaje['path'],
                     'extension' => $personaje['extension'],
@@ -52,7 +50,8 @@ class ApiController extends Controller
                 'nombre' => $personaje['name'],
                 'descripcion' => $personaje['description'],
                 'modificado' => $personaje['modified'],
-                'imagen' => $personaje['thumbnail']['path.extension']
+                'thumbnail_path' => $personaje['thumbnail']['path'],
+                'thumbnail_extension' => $personaje['thumbnail']['extension']
                 /* :{
                     'path' => $personaje['path'],
                     'extension' => $personaje['extension'],
