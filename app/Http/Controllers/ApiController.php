@@ -49,7 +49,10 @@ class ApiController extends Controller
                 'nombre' => $personaje['name'],
                 'descripcion' => $personaje['description'],
                 'modificado' => $personaje['modified'],
-                'imagen' => $personaje['thumbnail']['path']['extension']
+                'imagen' => $personaje['thumbnail'][
+                    ['path']
+                    ['extension']
+                ]
                 /* :{
                     'path' => $personaje['path'],
                     'extension' => $personaje['extension'],
