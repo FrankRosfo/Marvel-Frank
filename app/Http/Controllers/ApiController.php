@@ -16,7 +16,7 @@ class ApiController extends Controller
         // -- Recorrer elementos
         $personajes = [];
 
-        foreach ($datos['data.results'] as $personaje) {
+        foreach ($datos['data:results'] as $personaje) {
             $personajes[] = [
                 'id' => $personaje['id'],
                 'nombre' => $personaje['name'],
