@@ -80,7 +80,7 @@ https://templatemo.com/tm-551-stand-blog
         <div class="owl-banner owl-carousel">
           @foreach ($personajes as $personaje)
           <div class="item">
-          <a target="_blank" href="{{route('detalle.personaje',$personaje['id'])}}" class="image featured"><img src="{{$personaje['imagen']}}" alt="" /></a>
+          <a target="_blank" href="{{route('detalle.personaje',$personaje['id'])}}" class="image featured"><img src="{{$personaje['thumbnail_path']}}.{{$personaje['thumbnail_extension']}}" alt="" /></a>
             <div class="item-content">
               <div class="main-content">
                 <div class="meta-category">
