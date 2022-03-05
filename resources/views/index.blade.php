@@ -89,7 +89,7 @@ https://templatemo.com/tm-551-stand-blog
                 <a target="_blank" href="{{route('detalle.personaje',$personaje['id'])}}">{{$personaje['nombre']}}</a>
                 <ul class="post-info">
                   <li><a href="#">Descripcion: {{$personaje['descripcion']}}.</a></li>
-                  <li><a href="#">Historia: {{$personaje['historias']}}.</a></li>
+                  <li><a href="#">Modificado: {{$personaje['modificado']}}.</a></li>
                   {{-- <li><a href="#">Estatus: {{$personaje['estatus']}}.</a></li> --}}
                 </ul>
               </div>
