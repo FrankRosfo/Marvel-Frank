@@ -10,7 +10,7 @@ class ApiController extends Controller
     {
         // -- consumir api Rick and Morty
         $cliente = new \GuzzleHttp\Client();
-        $response = $cliente->request('GET', 'http://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=06ffa280d1bafc06d930b43d6d8dd14b&hash=4836337c443ff607ea200ffc08a55f3917e3a576');
+        $response = $cliente->request('GET', 'https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=06ffa280d1bafc06d930b43d6d8dd14b&hash=4836337c443ff607ea200ffc08a55f3917e3a576');
         $datos = json_decode($response->getBody()->getContents(), true);
 
         // -- Recorrer elementos
@@ -38,7 +38,7 @@ class ApiController extends Controller
 
         // -- consumir api Rick and Morty
         $cliente = new \GuzzleHttp\Client();
-        $response = $cliente->request('GET', 'http://gateway.marvel.com:443/v1/public/characters/'.$id.'?ts=1&apikey=06ffa280d1bafc06d930b43d6d8dd14b&hash=4836337c443ff607ea200ffc08a55f3917e3a576');
+        $response = $cliente->request('GET', 'https://gateway.marvel.com:443/v1/public/characters/'.$id.'?ts=1&apikey=06ffa280d1bafc06d930b43d6d8dd14b&hash=4836337c443ff607ea200ffc08a55f3917e3a576');
         $personajeIndividual = json_decode($response->getBody()->getContents(), true);
 
         // -- Recorrer elementos
