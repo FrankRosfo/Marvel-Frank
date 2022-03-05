@@ -16,18 +16,17 @@ class ApiController extends Controller
         // -- Recorrer elementos
         $personajes = [];
 
-        foreach ($datos['data:results'] as $personaje) {
+        foreach ($datos['data']['results'] as $personaje) {
             $personajes[] = [
                 'id' => $personaje['id'],
                 'nombre' => $personaje['name'],
                 'descripcion' => $personaje['description'],
                 'modificado' => $personaje['modified'],
-                'imagen' => $personaje['thumbnail'
+                'imagen' => $personaje['thumbnail']['path']
                 /* :{
                     'path' => $personaje['path'],
                     'extension' => $personaje['extension'],
                 }, */
-                ]
             ];
         }
 
@@ -44,18 +43,17 @@ class ApiController extends Controller
         // -- Recorrer elementos
         $personajes = [];
 
-        foreach ($datos['data.results'] as $personaje) {
+        foreach ($datos['data']['results'] as $personaje) {
             $personajes[] = [
                 'id' => $personaje['id'],
                 'nombre' => $personaje['name'],
                 'descripcion' => $personaje['description'],
                 'modificado' => $personaje['modified'],
-                'imagen' => $personaje['thumbnail'
+                'imagen' => $personaje['thumbnail']['path']
                 /* :{
                     'path' => $personaje['path'],
                     'extension' => $personaje['extension'],
                 }, */
-                ]
             ];
         }
         return view('detalles',['personaje' => $personajeIndividual, 'personajes' => $personajes]);
