@@ -12,6 +12,6 @@ use App\Http\Controllers\ApiController;
 |
 */
 
-Route::get('/',[ApiController::class, 'index'])->name('index');
+Route::get('/',[ApiController::class, 'comics'])->name('inicio');
 
 Route::get('detalles/{id}',[ApiController::class, 'detallePersonaje'])->name('detalle.personaje');

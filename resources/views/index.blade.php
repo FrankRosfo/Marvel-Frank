@@ -78,18 +78,18 @@ https://templatemo.com/tm-551-stand-blog
     <div class="main-banner header-text">
       <div class="container-fluid">
         <div class="owl-banner owl-carousel">
-          @foreach ($personajes as $personaje)
+          @foreach ($comics as $comic)
           <div class="item">
-          <a target="_blank" href="{{route('detalle.personaje',$personaje['id'])}}" class="image featured"><img src="{{$personaje['thumbnail_path']}}.{{$personaje['thumbnail_extension']}}" alt="" /></a>
+          <a target="_blank" href="{{route('detalle.personaje',$comic['id'])}}" class="image featured"><img src="{{$comic['thumbnail_path']}}.{{$comic['thumbnail_extension']}}" alt="" /></a>
             <div class="item-content">
               <div class="main-content">
                 <div class="meta-category">
                   <span></span>
                 </div>
-                <a target="_blank" href="{{route('detalle.personaje',$personaje['id'])}}">{{$personaje['nombre']}}</a>
+                <a target="_blank" href="{{route('detalle.personaje',$comic['id'])}}">{{$comic['titulo']}}</a>
                 <ul class="post-info">
-                  <li><a href="#">Descripcion: {{$personaje['descripcion']}}.</a></li>
-                  <li><a href="#">Modificado: {{$personaje['modificado']}}.</a></li>
+                  <li><a href="#">Paginas: {{$comic['n_paginas']}}.</a></li>
+                  <li><a href="#">Link: {{$comic['link']}}.</a></li>
                   {{-- <li><a href="#">Estatus: {{$personaje['estatus']}}.</a></li> --}}
                 </ul>
               </div>
