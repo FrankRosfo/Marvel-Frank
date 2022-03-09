@@ -72,8 +72,8 @@ class ApiController extends Controller
                 'thumbnail_extension' => $comic['thumbnail']['extension'],
                 'link' => $comic['urls'] = [
                     $link[] = [
-                        'type' => $comic['urls']['type'],
-                        'url' => $comic['urls']['url']
+                        'type' => $comic['type'],
+                        'url' => $comic['url']
                     ]
                 ]
             ];
