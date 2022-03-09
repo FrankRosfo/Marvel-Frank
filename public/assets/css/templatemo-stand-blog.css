@@ -81,7 +81,8 @@ h1,h2,h3,h4,h5,h6 {
 
 #preloader {
   overflow: hidden;
-  background: rgba(13, 28, 226, 0.986);
+  /* background: rgba(225, 8, 8, 0.616); */
+  background-image: url(../images/Avengers.jpg);
   left: 0;
   right: 0;
   top: 0;
