@@ -61,23 +61,20 @@ class ApiController extends Controller
 
         // -- Recorrer elementos
         $comics = [];
-        $link = [];
+        $links = [];
 
         foreach ($datos_comics['data']['results'] as $comic) {
-            $link[] = [
-                'urls' => $comic['urls']=[
-                    'type' => $comic['type'],
-                    'url' => $comic['url']
-                ]
-            ];
             $comics[] = [
                 'id' => $comic['id'],
                 'titulo' => $comic['title'],
                 'n_paginas' => $comic['pageCount'],
                 'thumbnail_path' => $comic['thumbnail']['path'],
-                'thumbnail_extension' => $comic['thumbnail']['extension']
+                'thumbnail_extension' => $comic['thumbnail']['extension'],
+                $links['urls'] = [
+                    'type' => $comic['type'],
+                    'url' => $comic['url']   
+                ]
             ];
-            $comics['link'] = $link;
         }
         return view('index',['comics' => $comics]);
     }
