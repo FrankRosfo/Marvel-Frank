@@ -35,7 +35,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .main-button a {
 	display: inline-block;
-	background-color: rgba(13, 28, 226, 0.986);
+	background-color: rgb(240, 9, 9);
 	color: #fff;
 	font-size: 13px;
 	font-weight: 500;
@@ -45,7 +45,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .main-button a:hover {
-	background-color: rgba(13, 28, 226, 0.986);
+	background-color: rgb(240, 9, 9);
 }
 
 .heading-page {
@@ -63,7 +63,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .page-heading .text-content h4 {
-	color:  rgba(13, 28, 226, 0.986);
+	color: rgb(240, 9, 9);
 	font-size: 18px;
 	text-transform: uppercase;
 	font-weight: 900;
@@ -81,8 +81,8 @@ h1,h2,h3,h4,h5,h6 {
 
 #preloader {
   overflow: hidden;
-  /* background: rgba(225, 8, 8, 0.616); */
-  background-image: url(../images/Avengers.jpg);
+  /* background: rgb(240, 9, 9); */
+  background-image: url(../images/Avengers.gif);
   left: 0;
   right: 0;
   top: 0;
@@ -195,7 +195,7 @@ header .navbar {
 .background-header .navbar-nav .nav-link.active,
 .background-header .navbar-nav .nav-link.show,
 .background-header .navbar-nav .show>.nav-link {
-	color: rgba(13, 28, 226, 0.986)!important;
+	color: rgb(240, 9, 9)!important;
 }
 .navbar .navbar-brand {
 	float: 	left;
@@ -240,14 +240,14 @@ header .navbar {
 .navbar .navbar-nav .nav-link.active,
 .navbar .navbar-nav .nav-link.show,
 .navbar .navbar-nav .show>.nav-link {
-	color: rgba(13, 28, 226, 0.986)
+	color: rgb(240, 9, 9);
 }
 .navbar .navbar-toggler-icon {
 	background-image: none;
 }
 .navbar .navbar-toggler {
 	border-color: #fff;
-	background-color: rgba(13, 28, 226, 0.986);	
+	background-color: rgb(240, 9, 9);	
 	height: 46px;
 	outline: none;
 	border-radius: 0px;
@@ -285,7 +285,7 @@ header .navbar {
 }
 
 .owl-banner .item .item-content .meta-category span {
-	color: rgba(13, 28, 226, 0.986);
+	color: rgb(240, 9, 9);
 	font-size: 18px;
 	text-transform: uppercase;
 	font-weight: 900;
@@ -324,7 +324,7 @@ header .navbar {
 }
 
 .owl-banner .item .item-content ul li a:hover {
-	color: rgba(13, 28, 226, 0.986);
+	color: rgb(240, 9, 9);
 }
 
 .owl-banner .owl-nav {
@@ -423,7 +423,7 @@ header .navbar {
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
 	font-weight: 900;
-	color: rgba(13, 28, 226, 0.986);
+	color: rgb(240, 9, 9);
 }
 
 .blog-posts .down-content h4 {
@@ -471,7 +471,7 @@ header .navbar {
 }
 
 .blog-posts .down-content ul.post-info li a:hover {
-	color: rgba(13, 28, 226, 0.986);
+	color: rgb(240, 9, 9);
 }
 
 .blog-posts .down-content p {
@@ -492,7 +492,7 @@ header .navbar {
 
 .blog-posts .down-content ul.post-tags li:first-child i,
 .blog-posts .down-content ul.post-share li:first-child i {
-	color: rgba(13, 28, 226, 0.986);
+	color: rgb(240, 9, 9);
 	margin-right: 5px;
 }
 
@@ -511,7 +511,7 @@ header .navbar {
 
 .blog-posts .down-content ul.post-tags li a:hover,
 .blog-posts .down-content ul.post-share li a:hover {
-	color: rgba(13, 28, 226, 0.986);
+	color: rgb(240, 9, 9);
 }
 
 .blog-posts .main-button a {
@@ -545,13 +545,13 @@ ul.page-numbers li a {
 }
 
 ul.page-numbers li.active a {
-	background-color: rgba(13, 28, 226, 0.986);
-	border-color: rgba(13, 28, 226, 0.986);
+	background-color: rgb(240, 9, 9);
+	border-color: rgb(240, 9, 9);
 	color: #fff;
 }
 
 ul.page-numbers li a:hover {
-	color: rgba(13, 28, 226, 0.986);
+	color: rgb(240, 9, 9);
 }
 
 .blog-posts .sidebar-heading h2 {
@@ -656,7 +656,7 @@ ul.page-numbers li a:hover {
 
 .blog-posts .submit-comment button {
 	display: inline-block;
-	background-color: rgba(13, 28, 226, 0.986);
+	background-color: rgb(240, 9, 9);
 	color: #fff;
 	font-size: 13px;
 	font-weight: 500;
@@ -668,7 +668,7 @@ ul.page-numbers li a:hover {
 }
 
 .blog-posts .submit-comment button:hover {
-	background-color: rgba(13, 28, 226, 0.986);
+	background-color: rgb(240, 9, 9);
 }
 
 /* Sidebar */
@@ -733,7 +733,7 @@ ul.page-numbers li a:hover {
 }
 
 .sidebar .recent-posts ul li h5:hover {
-	color: rgba(13, 28, 226, 0.986);
+	color: rgb(240, 9, 9);
 }
 
 .sidebar .recent-posts ul li span {
@@ -759,7 +759,7 @@ ul.page-numbers li a:hover {
 }
 
 .sidebar .categories ul li a:hover {
-	color: rgba(13, 28, 226, 0.986);
+	color: rgb(240, 9, 9);
 }
 
 .sidebar .tags ul li {
@@ -782,8 +782,8 @@ ul.page-numbers li a:hover {
 }
 
 .sidebar .tags ul li a:hover {
-	background-color: rgba(13, 28, 226, 0.986);
-	border-color: rgba(13, 28, 226, 0.986);
+	background-color: rgb(240, 9, 9);
+	border-color: rgb(240, 9, 9);
 	color: #fff;
 }
 
@@ -832,7 +832,7 @@ footer ul.social-icons li a {
 }
 
 footer ul.social-icons li a:hover {
-	color: rgba(13, 28, 226, 0.986);
+	color: rgb(240, 9, 9);
 }
 
 footer p {
@@ -842,11 +842,11 @@ footer p {
 }
 
 footer p a {
-	color: rgba(13, 28, 226, 0.986);
+	color: rgb(240, 9, 9);
 }
 
 footer p a:hover {
-	color: rgba(13, 28, 226, 0.986);
+	color: rgb(240, 9, 9);
 }
 
 
@@ -905,7 +905,7 @@ footer p a:hover {
 
 .contact-us .contact-form button {
 	display: inline-block;
-	background-color: rgba(13, 28, 226, 0.986);
+	background-color: rgb(240, 9, 9);
 	color: #fff;
 	font-size: 13px;
 	font-weight: 500;
@@ -917,7 +917,7 @@ footer p a:hover {
 }
 
 .contact-us .contact-form button:hover {
-	background-color: rgba(13, 28, 226, 0.986);
+	background-color: rgb(240, 9, 9);
 }
 
 .contact-us .contact-information {
@@ -987,7 +987,7 @@ footer p a:hover {
 }
 
 .about-us ul li a:hover {
-	background-color: rgba(13, 28, 226, 0.986);
+	background-color: rgb(240, 9, 9);
 }
 
 
@@ -1056,7 +1056,7 @@ footer p a:hover {
 	.navbar .navbar-nav .nav-link.active,
 	.navbar .navbar-nav .nav-link.show,
 	.navbar .navbar-nav .show>.nav-link {
-		color: rgba(13, 28, 226, 0.986)!important;
+		color: rgb(240, 9, 9)!important;
 		border-bottom: none!important;
 		padding-bottom: 15px;
 	}
