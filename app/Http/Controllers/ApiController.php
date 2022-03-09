@@ -70,11 +70,9 @@ class ApiController extends Controller
                 'n_paginas' => $comic['pageCount'],
                 'thumbnail_path' => $comic['thumbnail']['path'],
                 'thumbnail_extension' => $comic['thumbnail']['extension'],
-                $comic['urls'] = [
-                    $links[] = [
-                        'type' => $comic['type'],
-                        'url' => $comic['url']
-                    ]
+                'link' => $links = [
+                    'type' => $comic['urls']['type'],
+                    'url' => $comic['urls']['url']
                 ]
             ];
         }
