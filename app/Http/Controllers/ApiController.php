@@ -64,9 +64,11 @@ class ApiController extends Controller
         $link = [];
 
         foreach ($datos_comics['data']['results'] as $comic) {
-            $link[['urls']] = [
-                'type' => $comic['type'],
-                'url' => $comic['url']
+            $link[] = [
+                'urls' => $comic['urls']=[
+                    'type' => $comic['type'],
+                    'url' => $comic['url']
+                ]
             ];
             $comics[] = [
                 'id' => $comic['id'],
