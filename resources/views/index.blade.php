@@ -89,7 +89,7 @@ https://templatemo.com/tm-551-stand-blog
                 <a target="_blank" href="{{route('detalle.personaje',$comic['id'])}}">{{$comic['titulo']}}</a>
                 <ul class="post-info">
                   <li><a href="#">Paginas: {{$comic['n_paginas']}}.</a></li>
-                  <li><a href="#">Link: {{-- {{$comic['link_type']}}.{{$comic['link_url']}} --}}.</a></li>
+                  <li><a href="#">Link: {{$comic['link']}}.</a></li>
                   {{-- <li><a href="#">Estatus: {{$personaje['estatus']}}.</a></li> --}}
                 </ul>
               </div>
