@@ -35,7 +35,7 @@ Route::get('/detapersonajes/{id}',[PersonajesApiController::class, 'detallePerso
 |--------------------------------------------------------------------------
 */
 
-Route::get('/comics',[ComicsApiController::class, 'comics'])->name('inicio');
+Route::get('/comics',[ComicsApiController::class, 'comics'])->name('comics');
 
 Route::get('detacomics/{id}',[ComicsApiController::class, 'detalleComics'])->name('detalle.comic');
 
