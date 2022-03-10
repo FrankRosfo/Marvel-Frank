@@ -26,8 +26,9 @@ Route::get('/', [GeneralController::class,'raiz'])->name('raiz');
 | Rutas hacia la API-Marvel
 |
 */
+Route::get('/inicio',[ApiController::class, 'comics'])->name('inicio');
 
-Route::get('/',[ApiController::class, 'comics'])->name('inicio');
+Route::get('/inicio',[ApiController::class, 'personajes'])->name('personajes');
 
 Route::get('detalles/{id}',[ApiController::class, 'detallePersonaje'])->name('detalle.personaje');
 

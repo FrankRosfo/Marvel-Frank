@@ -73,18 +73,12 @@ class ApiController extends Controller
                 'series_name' => $comic['series']['name'],
                 'series_resourceURI' => $comic['series']['resourceURI']
             ];
-            foreach ($datos_comics['data']['results']['urls'] as $link) {
+            foreach ($datos_comics['urls'] as $link) {
                 $links[] = [
                     'type' => $link['type'],
                     'url' => $link['url']
                 ];
             }
-            /* 'link' => $comic['urls'] = [
-                $link[] = [
-                    'type' => $comic['type'],
-                    'url' => $comic['url']
-                ]
-            ] */
         }
         return view('index',['comics' => $comics]);
     }
