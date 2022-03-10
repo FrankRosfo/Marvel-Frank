@@ -27,13 +27,13 @@
     <div class="owl-banner owl-carousel">
       @foreach ($comics as $comic)
         <div class="item">
-        <a target="_blank" href="{{route('detalle.personaje',$comic['id'])}}" class="image featured"><img src="{{$comic['thumbnail_path']}}.{{$comic['thumbnail_extension']}}" alt="" /></a>
+        <a target="_blank" href="{{route('detalle.comic',$comic['id'])}}" class="image featured"><img src="{{$comic['thumbnail_path']}}.{{$comic['thumbnail_extension']}}" alt="" /></a>
           <div class="item-content">
             <div class="main-content">
               <div class="meta-category">
                 <span></span>
               </div>
-              <a target="_blank" href="{{route('detalle.personaje',$comic['id'])}}">{{$comic['titulo']}}</a>
+              <a target="_blank" href="{{route('detalle.comic',$comic['id'])}}">{{$comic['titulo']}}</a>
               <ul class="post-info">
                 <li><a href="#">Paginas: {{$comic['n_paginas']}}.</a></li>
                 {{-- <li><a href="#">Link: {{$comic['link']}}.</a></li> --}}

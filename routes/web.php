@@ -10,11 +10,13 @@ use App\Http\Controllers\GeneralController;
 
 /*
 |--------------------------------------------------------------------------
-| Ruta Raiz / Ruta raiz para enviar a un inicio
+| Ruta General / Ruta raiz para enviar a un inicio
 |--------------------------------------------------------------------------
 */
 
 Route::get('/',[GeneralController::class, 'raiz'])->name('raiz');
+
+Route::get('/inicio',[GeneralController::class, 'inicio'])->name('inicio');
 
 /*
 |--------------------------------------------------------------------------
@@ -22,11 +24,9 @@ Route::get('/',[GeneralController::class, 'raiz'])->name('raiz');
 |--------------------------------------------------------------------------
 */
 
-Route::get('/personajes',[ApiController::class, 'personajes'])->name('personajes');
+Route::get('/personajes',[PersonajesApiController::class, 'personajes'])->name('personajes');
 
-Route::get('/detapersonajes/{id}',[ApiController::class, 'detallePersonajes'])->name('detalle.personaje');
-
-Route::get('/tablapersonajes',[ApiController::class, 'tabla'])->name('tabla.personaje');
+Route::get('/detapersonajes/{id}',[PersonajesApiController::class, 'detallePersonajes'])->name('detalle.personaje');
 
 /*
 |--------------------------------------------------------------------------
@@ -34,9 +34,9 @@ Route::get('/tablapersonajes',[ApiController::class, 'tabla'])->name('tabla.pers
 |--------------------------------------------------------------------------
 */
 
-Route::get('/comics',[ApiController::class, 'comics'])->name('inicio');
+Route::get('/comics',[ComicsApiController::class, 'comics'])->name('inicio');
 
-Route::get('detacomics/{id}',[ApiController::class, 'detalleComics'])->name('detalle.comic');
+Route::get('detacomics/{id}',[ComicsApiController::class, 'detalleComics'])->name('detalle.comic');
 
 /*
 |--------------------------------------------------------------------------
