@@ -16,7 +16,7 @@ use App\Http\Controllers\GeneralController;
 |
 */
 
-Route::get('/', [GeneralController::class,'raiz'])->name('raiz');
+/* Route::get('/', [GeneralController::class,'raiz'])->name('raiz'); */
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +27,7 @@ Route::get('/', [GeneralController::class,'raiz'])->name('raiz');
 |
 */
 
-Route::get('inicio',[ApiController::class, 'comics'])->name('inicio');
+Route::get('/',[ApiController::class, 'comics'])->name('inicio');
 
 Route::get('detalles/{id}',[ApiController::class, 'detallePersonaje'])->name('detalle.personaje');
 
