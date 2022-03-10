@@ -376,7 +376,7 @@ header .navbar {
 }
 
 .call-to-action .main-content span {
-	color: rgba(13, 28, 226, 0.986);
+	color: rgb(240, 9, 9);
 	font-size: 18px;
 	font-weight: 900;
 	letter-spacing: 0.5px;

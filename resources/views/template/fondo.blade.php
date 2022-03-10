@@ -9,7 +9,7 @@
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
 
-    <title>Marvel/Frank</title>
+    <title>Blog A/F</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -63,12 +63,13 @@ https://templatemo.com/tm-551-stand-blog
                 <div class="col-lg-12">
                     <ul class="social-icons">
                         <li><a href="https://www.facebook.com/profile.php?id=100064101466027">Facebook</a></li>
+                        <li><a href="https://mobile.twitter.com/arlc29">Twitter</a></li>
                         <li><a href="https://instagram.com/frankrosfo?utm_medium=copy_link">Instagram</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-12">
                     <div class="copyright-text">
-                        <p>Copyright 2022 Marvel/Frank.| Design: <a rel="nofollow" href="https://templatemo.com" target="_parent">Frank</a></p>
+                        <p>Copyright 2022 Blog A/F.| Design: <a rel="nofollow" href="https://templatemo.com" target="_parent">TemplateMo</a></p>
                     </div>
                 </div>
             </div>

@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Database\Seeders\galletasSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,6 +13,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(galletasSeeder::class);
+        // \App\Models\User::factory(10)->create();
     }
 }

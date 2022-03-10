@@ -1,4 +1,4 @@
-@extends('template.fondo')
+@extends('blog.template.fondo')
 @section('Logotipo')
 <a class="navbar-brand" href="inicio" ><h2>Blog A/F<em>.</em></h2></a>
 @endsection
@@ -19,72 +19,33 @@
 </li>
 @endsection
 @section('Contenido')
-
+{{-- @if(auth()->check()) --}}
 <!-- Page Content -->
 <!-- Banner Starts Here -->
 <div class="main-banner header-text">
   <div class="container-fluid">
     <div class="owl-banner owl-carousel">
-      @foreach ($comics as $comic)
-      <div class="item">
-      <a target="_blank" href="{{route('detalle.personaje',$comic['id'])}}" class="image featured"><img src="{{$comic['thumbnail_path']}}.{{$comic['thumbnail_extension']}}" alt="" /></a>
-        <div class="item-content">
-          <div class="main-content">
-            <div class="meta-category">
-              <span></span>
+      @foreach ($personajes as $personaje)
+        <div class="item">
+        <a target="_blank" href="{{route('detalle.personaje',$personaje['id'])}}" class="image featured"><img src="{{$personaje['imagen']}}" alt="" /></a>
+          <div class="item-content">
+            <div class="main-content">
+              <div class="meta-category">
+                <span></span>
+              </div>
+              <a target="_blank" href="{{route('detalle.personaje',$personaje['id'])}}">{{$personaje['nombre']}}</a>
+              <ul class="post-info">
+                <li><a href="#">Especie: {{$personaje['especie']}}.</a></li>
+                <li><a href="#">Genero: {{$personaje['genero']}}.</a></li>
+                <li><a href="#">Estatus: {{$personaje['estatus']}}.</a></li>
+              </ul>
             </div>
-            <a target="_blank" href="{{route('detalle.personaje',$comic['id'])}}">{{$comic['titulo']}}</a>
-            <ul class="post-info">
-              <li><a href="#">Paginas: {{$comic['n_paginas']}}.</a></li>
-              {{-- <li><a href="#">Link: {{$comic['link']}}.</a></li> --}}
-            </ul>
           </div>
         </div>
-      </div>
       @endforeach
-      <div class="item">
-        <img src="assets/images/banner-item-02.jpg" alt="">
-        <div class="item-content">
-          <div class="main-content">
-            <div class="meta-category">
-              <span>Nature</span>
-            </div>
-            <a href="post-details.html"><h4>Donec porttitor augue at velit</h4></a>
-            <ul class="post-info">
-              <li><a href="#">Admin</a></li>
-              <li><a href="#">May 14, 2020</a></li>
-              <li><a href="#">24 Comments</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>
-<!-- Banner Ends Here -->
-
-<section class="call-to-action">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="main-content">
-          <div class="row">
-            <div class="col-lg-8">
-              <span>Stand Blog HTML5 Template</span>
-              <h4>Creative HTML Template For Bloggers!</h4>
-            </div>
-            <div class="col-lg-4">
-              <div class="main-button">
-                <a rel="nofollow" href="https://templatemo.com/tm-551-stand-blog" target="_parent">Download Now!</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <section class="blog-posts">
   <div class="container">
@@ -95,31 +56,29 @@
             <div class="col-lg-12">
               <div class="blog-post">
                 <div class="blog-thumb">
-                  <img src="assets/images/blog-post-01.jpg" alt="">
+                  <img src="assets/images/Image1.jpg" alt="">
                 </div>
                 <div class="down-content">
-                  <span>Lifestyle</span>
-                  <a href="post-details.html"><h4>Best Template Website for HTML CSS</h4></a>
-                  <ul class="post-info">
-                    <li><a href="#">Admin</a></li>
-                    <li><a href="#">May 31, 2020</a></li>
-                    <li><a href="#">12 Comments</a></li>
-                  </ul>
-                  <p>Stand Blog is a free HTML CSS template for your CMS theme. You can easily adapt or customize it for any kind of CMS or website builder. You are allowed to use it for your business. You are NOT allowed to re-distribute the template ZIP file on any template collection site for the download purpose. <a rel="nofollow" href="https://templatemo.com/contact" target="_parent">Contact TemplateMo</a> for more info. Thank you.</p>
+                  <span>Conceptos</span>
+                  <a href="1_sistemas"><h4>Sistemas de Informaci&oacute;n</h4></a>
+                  <p>Un sistema de informaci&oacute;n es un conjunto de datos que interact&uacute;an entre s&iacute; con un fin com&uacute;n.
+                      La importancia de un sistema de informaci&oacute;n radica en la eficiencia en la correlaci&oacute;n de una gran cantidad
+                      de datos ingresados a trav&eacute;s de procesos diseñados para cada área con el objetivo de producir informaci&oacute;n
+                      válida para la posterior toma de decisiones.</p>
                   <div class="post-options">
                     <div class="row">
                       <div class="col-6">
                         <ul class="post-tags">
                           <li><i class="fa fa-tags"></i></li>
-                          <li><a href="#">Beauty</a>,</li>
-                          <li><a href="#">Nature</a></li>
+                          <li><a>UPT</a>,</li>
+                          <li><a>Tec&aacute;mac</a></li>
                         </ul>
                       </div>
                       <div class="col-6">
                         <ul class="post-share">
                           <li><i class="fa fa-share-alt"></i></li>
-                          <li><a href="#">Facebook</a>,</li>
-                          <li><a href="#"> Twitter</a></li>
+                          <li><a href="https://www.facebook.com/profile.php?id=100064101466027">Facebook</a></li>
+                          <li><a href="https://instagram.com/frankrosfo?utm_medium=copy_link">Instagram</a></li>
                         </ul>
                       </div>
                     </div>
@@ -130,31 +89,28 @@
             <div class="col-lg-12">
               <div class="blog-post">
                 <div class="blog-thumb">
-                  <img src="assets/images/blog-post-02.jpg" alt="">
+                  <img src="assets/images/Image2.jpg" alt="">
                 </div>
                 <div class="down-content">
-                  <span>Healthy</span>
-                  <a href="post-details.html"><h4>Etiam id diam vitae lorem dictum</h4></a>
-                  <ul class="post-info">
-                    <li><a href="#">Admin</a></li>
-                    <li><a href="#">May 24, 2020</a></li>
-                    <li><a href="#">36 Comments</a></li>
-                  </ul>
-                  <p>You can support us by contributing a little via PayPal. Please contact <a rel="nofollow" href="https://templatemo.com/contact" target="_parent">TemplateMo</a> via Live Chat or Email. If you have any question or feedback about this template, feel free to talk to us. Also, you may check other CSS templates such as <a rel="nofollow" href="https://templatemo.com/tag/multi-page" target="_parent">multi-page</a>, <a rel="nofollow" href="https://templatemo.com/tag/resume" target="_parent">resume</a>, <a rel="nofollow" href="https://templatemo.com/tag/video" target="_parent">video</a>, etc.</p>
+                  <span>Evoluci&oacute;n</span>
+                  <a href="2_sistemas"><h4>Sistemas de informaci&oacute;n</h4></a>
+                  <p>1950 - 1960: procesamiento de datos electr&oacute;nicos, sistema de procesamiento de transacciones. Durante este per&iacute;odo,
+                      el papel de SI fue principalmente para realizar actividades como el procesamiento de transacciones, el mantenimiento de
+                      registros y la contabilidad. SI se utiliz&oacute; principalmente para el procesamiento electr&oacute;nico de datos.</p>
                   <div class="post-options">
                     <div class="row">
                       <div class="col-6">
                         <ul class="post-tags">
                           <li><i class="fa fa-tags"></i></li>
-                          <li><a href="#">Best Templates</a>,</li>
-                          <li><a href="#">TemplateMo</a></li>
+                          <li><a>UPT</a>,</li>
+                          <li><a>Tec&aacute;mac</a></li>
                         </ul>
                       </div>
                       <div class="col-6">
                         <ul class="post-share">
                           <li><i class="fa fa-share-alt"></i></li>
-                          <li><a href="#">Facebook</a>,</li>
-                          <li><a href="#">Twitter</a></li>
+                          <li><a href="https://www.facebook.com/profile.php?id=100064101466027">Facebook</a>,</li>
+                          <li><a href="https://instagram.com/frankrosfo?utm_medium=copy_link">Instagram</a></li>
                         </ul>
                       </div>
                     </div>
@@ -165,31 +121,29 @@
             <div class="col-lg-12">
               <div class="blog-post">
                 <div class="blog-thumb">
-                  <img src="assets/images/blog-post-03.jpg" alt="">
+                  <img src="assets/images/Image3.jpg" alt="">
                 </div>
                 <div class="down-content">
-                  <span>Fashion</span>
-                  <a href="post-details.html"><h4>Donec tincidunt leo nec magna</h4></a>
-                  <ul class="post-info">
-                    <li><a href="#">Admin</a></li>
-                    <li><a href="#">May 14, 2020</a></li>
-                    <li><a href="#">48 Comments</a></li>
-                  </ul>
-                  <p>Nullam at quam ut lacus aliquam tempor vel sed ipsum. Donec pellentesque tincidunt imperdiet. Mauris sit amet justo vulputate, cursus massa congue, vestibulum odio. Aenean elit nunc, gravida in erat sit amet, feugiat viverra leo. Phasellus interdum, diam commodo egestas rhoncus, turpis nisi consectetur nibh, in vehicula eros orci vel neque.</p>
+                  <span>Conceptos</span>
+                  <a href="3_sistemas"><h4>Cliente-Servidor</h4></a>
+                  <p>Empez&oacute; a ser aceptado a finales de los años 80’ para referirse a las PC’s en red.<br>Su funcionamiento es de la siguiente
+                    manera, se tiene una m&aacute;quina cliente que requiere un servicio de una m&aacute;quina servidor, y &eacute;ste realiza la funci&oacute;n para la
+                    que está programado.Desde el punto de vista funcional, es una arquitectura distribuida que permite a los usuarios finales
+                    obtener acceso a la informaci&oacute;n a&uacute;n en los entornos multiplataforma.</p>
                   <div class="post-options">
                     <div class="row">
                       <div class="col-6">
                         <ul class="post-tags">
                           <li><i class="fa fa-tags"></i></li>
-                          <li><a href="#">HTML CSS</a>,</li>
-                          <li><a href="#">Photoshop</a></li>
+                          <li><a>UPT</a>,</li>
+                          <li><a>Tec&aacute;mac</a></li>
                         </ul>
                       </div>
                       <div class="col-6">
                         <ul class="post-share">
                           <li><i class="fa fa-share-alt"></i></li>
-                          <li><a href="#">Facebook</a>,</li>
-                          <li><a href="#">Twitter</a></li>
+                          <li><a href="https://www.facebook.com/profile.php?id=100064101466027">Facebook</a>,</li>
+                          <li><a href="https://instagram.com/frankrosfo?utm_medium=copy_link">Instagram</a></li>
                         </ul>
                       </div>
                     </div>
@@ -199,7 +153,7 @@
             </div>
             <div class="col-lg-12">
               <div class="main-button">
-                <a href="blog.html">View All Posts</a>
+                <a href="blog">Ver m&aacute;s Posts</a>
               </div>
             </div>
           </div>
@@ -209,30 +163,23 @@
         <div class="sidebar">
           <div class="row">
             <div class="col-lg-12">
-              <div class="sidebar-item search">
-                <form id="search_form" name="gs" method="GET" action="#">
-                  <input type="text" name="q" class="searchText" placeholder="type to search..." autocomplete="on">
-                </form>
-              </div>
-            </div>
-            <div class="col-lg-12">
               <div class="sidebar-item recent-posts">
                 <div class="sidebar-heading">
-                  <h2>Recent Posts</h2>
+                  <h2>&Uacute;ltimos Comentarios</h2>
                 </div>
                 <div class="content">
                   <ul>
-                    <li><a href="post-details.html">
-                      <h5>Vestibulum id turpis porttitor sapien facilisis scelerisque</h5>
-                      <span>May 31, 2020</span>
+                    <li><a>
+                      <h5>Interesante sitio web</h5>
+                      <span>Ene 28, 2022</span>
                     </a></li>
-                    <li><a href="post-details.html">
-                      <h5>Suspendisse et metus nec libero ultrices varius eget in risus</h5>
-                      <span>May 28, 2020</span>
+                    <li><a>
+                      <h5>¿Para pasar la materia cierto? XD</h5>
+                      <span>Ene 18, 2022</span>
                     </a></li>
-                    <li><a href="post-details.html">
-                      <h5>Swag hella echo park leggings, shaman cornhole ethical coloring</h5>
-                      <span>May 14, 2020</span>
+                    <li><a>
+                      <h5>Me gusto el diseño esta muy interesante</h5>
+                      <span>Ene 10, 2022</span>
                     </a></li>
                   </ul>
                 </div>
@@ -278,4 +225,5 @@
     </div>
   </div>
 </section>
+{{-- @endif --}}
 @endsection
