@@ -9,24 +9,14 @@ use App\Http\Controllers\GeneralController;
 
 /*
 |--------------------------------------------------------------------------
-| Rutas raiz
-|--------------------------------------------------------------------------
-|
-| Rutas para redirigir a inicio
-|
-*/
-
-Route::get('/', [GeneralController::class,'raiz'])->name('raiz');
-
-/*
-|--------------------------------------------------------------------------
 | Rutas Api
 |--------------------------------------------------------------------------
 |
 | Rutas hacia la API-Marvel
 |
 */
-Route::get('/',[ApiController::class, 'comics'])->name('inicio');
+
+Route::get('/',[ApiController::class, 'comics'])->name('comics');
 
 Route::get('/inicio',[ApiController::class, 'personajes'])->name('personajes');
 
