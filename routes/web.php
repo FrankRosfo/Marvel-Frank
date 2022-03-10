@@ -15,7 +15,7 @@ use App\Http\Controllers\GeneralController;
 | Rutas hacia la API-Marvel
 |
 */
-Route::get('/inicio',[ApiController::class, 'comics'])->name('inicio');
+Route::get('/',[ApiController::class, 'comics'])->name('inicio');
 
 Route::get('/personajes',[ApiController::class, 'personajes'])->name('personajes');
 
