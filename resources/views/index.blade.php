@@ -52,39 +52,40 @@
       <div class="col-lg-8">
         <div class="all-blog-posts">
           <div class="row">
-            <div class="col-lg-12">
-              <div class="blog-post">
-                <div class="blog-thumb">
-                  <img src="assets/images/Image1.jpg" alt="">
-                </div>
-                <div class="down-content">
-                  <span>Conceptos</span>
-                  <a href="1_sistemas"><h4>Sistemas de Informaci&oacute;n</h4></a>
-                  <p>Un sistema de informaci&oacute;n es un conjunto de datos que interact&uacute;an entre s&iacute; con un fin com&uacute;n.
-                      La importancia de un sistema de informaci&oacute;n radica en la eficiencia en la correlaci&oacute;n de una gran cantidad
-                      de datos ingresados a trav&eacute;s de procesos diseñados para cada área con el objetivo de producir informaci&oacute;n
-                      válida para la posterior toma de decisiones.</p>
-                  <div class="post-options">
-                    <div class="row">
-                      <div class="col-6">
-                        <ul class="post-tags">
-                          <li><i class="fa fa-tags"></i></li>
-                          <li><a>UPT</a>,</li>
-                          <li><a>Tec&aacute;mac</a></li>
-                        </ul>
-                      </div>
-                      <div class="col-6">
-                        <ul class="post-share">
-                          <li><i class="fa fa-share-alt"></i></li>
-                          <li><a href="https://www.facebook.com/profile.php?id=100064101466027">Facebook</a></li>
-                          <li><a href="https://instagram.com/frankrosfo?utm_medium=copy_link">Instagram</a></li>
-                        </ul>
+            @foreach($personajes as $personaje)
+              @if($loop->index < 3)
+                <div class="col-lg-12">
+                  <div class="blog-post">
+                    <div class="blog-thumb">
+                      <img src="{{ $personaje['imagen'] }}.{{ $personaje['imagen_extension'] }}" alt="">
+                    </div>
+                    <div class="down-content">
+                      <span>Marvel</span>
+                      <a href="contenido"><h4>{{ $personaje['nombre'] }}</h4></a>
+                      <p>{{ $personaje['descripcion'] }}</p>
+                      <div class="post-options">
+                        <div class="row">
+                          <div class="col-6">
+                            <ul class="post-tags">
+                              <li><i class="fa fa-tags"></i></li>
+                              <li><a>Comics:</a>,</li>
+                              <li><a>{{ $personaje['comics_numero'] }}</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-6">
+                            <ul class="post-share">
+                              <li><i class="fa fa-share-alt"></i></li>
+                              <li><a href="https://www.facebook.com/profile.php?id=100064101466027">Facebook</a></li>
+                              <li><a href="https://instagram.com/frankrosfo?utm_medium=copy_link">Instagram</a></li>
+                            </ul>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              @endif
+            @endforeach
             <div class="col-lg-12">
               <div class="blog-post">
                 <div class="blog-thumb">
