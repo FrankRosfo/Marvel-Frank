@@ -25,23 +25,70 @@
 <div class="main-banner header-text">
   <div class="container-fluid">
     <div class="owl-banner owl-carousel">
-      @foreach ($comics as $comic)
-        <div class="item">
-        <a target="_blank" href="{{route('detalle.comic',$comic['id'])}}" class="image featured"><img src="{{$comic['thumbnail_path']}}.{{$comic['thumbnail_extension']}}" alt="" /></a>
-          <div class="item-content">
-            <div class="main-content">
-              <div class="meta-category">
-                <span></span>
-              </div>
-              <a target="_blank" href="{{route('detalle.comic',$comic['id'])}}">{{$comic['titulo']}}</a>
-              <ul class="post-info">
-                <li><a href="#">Paginas: {{$comic['n_paginas']}}.</a></li>
-                {{-- <li><a href="#">Link: {{$comic['link']}}.</a></li> --}}
-              </ul>
+      <div class="item">
+        <img src="assets/images/banner-item-01.jpg" alt="">
+        <div class="item-content">
+          <div class="main-content">
+            <div class="meta-category">
+              <span>Fashion</span>
             </div>
+            <a href="post-details.html"><h4>Morbi dapibus condimentum</h4></a>
+            <ul class="post-info">
+              <li><a href="#">Admin</a></li>
+              <li><a href="#">May 12, 2020</a></li>
+              <li><a href="#">12 Comments</a></li>
+            </ul>
           </div>
         </div>
-      @endforeach
+      </div>
+      <div class="item">
+        <img src="assets/images/banner-item-02.jpg" alt="">
+        <div class="item-content">
+          <div class="main-content">
+            <div class="meta-category">
+              <span>Fashion</span>
+            </div>
+            <a href="post-details.html"><h4>Morbi dapibus condimentum</h4></a>
+            <ul class="post-info">
+              <li><a href="#">Admin</a></li>
+              <li><a href="#">May 12, 2020</a></li>
+              <li><a href="#">12 Comments</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img src="assets/images/banner-item-03.jpg" alt="">
+        <div class="item-content">
+          <div class="main-content">
+            <div class="meta-category">
+              <span>Fashion</span>
+            </div>
+            <a href="post-details.html"><h4>Morbi dapibus condimentum</h4></a>
+            <ul class="post-info">
+              <li><a href="#">Admin</a></li>
+              <li><a href="#">May 12, 2020</a></li>
+              <li><a href="#">12 Comments</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img src="assets/images/banner-item-04.jpg" alt="">
+        <div class="item-content">
+          <div class="main-content">
+            <div class="meta-category">
+              <span>Fashion</span>
+            </div>
+            <a href="post-details.html"><h4>Morbi dapibus condimentum</h4></a>
+            <ul class="post-info">
+              <li><a href="#">Admin</a></li>
+              <li><a href="#">May 12, 2020</a></li>
+              <li><a href="#">12 Comments</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
