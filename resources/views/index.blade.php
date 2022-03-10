@@ -17,6 +17,11 @@
 <li class="nav-item">
   <a class="nav-link" href="logout">Cerrar Sesi&oacute;n</a>
 </li>
+<div class="sidebar-item search">
+  <form id="search_form" name="gs" method="GET" action="#">
+    <input type="text" name="q" class="searchText" placeholder="type to search..." autocomplete="on">
+  </form>
+</div>
 @endsection
 @section('Contenido')
 {{-- @if(auth()->check()) --}}
@@ -109,7 +114,7 @@
                     <div class="down-content">
                       <span>Marvel</span>
                       <a href="contenido"><h4>{{ $personaje['nombre'] }}</h4></a>
-                      <p>{{ $personaje['descripcion'] }}</p>
+                      {{ $personaje['descripcion'] }} 
                       <div class="post-options">
                         <div class="row">
                           <div class="col-6">
@@ -133,71 +138,6 @@
                 </div>
               @endif
             @endforeach
-            <div class="col-lg-12">
-              <div class="blog-post">
-                <div class="blog-thumb">
-                  <img src="assets/images/Image2.jpg" alt="">
-                </div>
-                <div class="down-content">
-                  <span>Evoluci&oacute;n</span>
-                  <a href="2_sistemas"><h4>Sistemas de informaci&oacute;n</h4></a>
-                  <p>1950 - 1960: procesamiento de datos electr&oacute;nicos, sistema de procesamiento de transacciones. Durante este per&iacute;odo,
-                      el papel de SI fue principalmente para realizar actividades como el procesamiento de transacciones, el mantenimiento de
-                      registros y la contabilidad. SI se utiliz&oacute; principalmente para el procesamiento electr&oacute;nico de datos.</p>
-                  <div class="post-options">
-                    <div class="row">
-                      <div class="col-6">
-                        <ul class="post-tags">
-                          <li><i class="fa fa-tags"></i></li>
-                          <li><a>UPT</a>,</li>
-                          <li><a>Tec&aacute;mac</a></li>
-                        </ul>
-                      </div>
-                      <div class="col-6">
-                        <ul class="post-share">
-                          <li><i class="fa fa-share-alt"></i></li>
-                          <li><a href="https://www.facebook.com/profile.php?id=100064101466027">Facebook</a>,</li>
-                          <li><a href="https://instagram.com/frankrosfo?utm_medium=copy_link">Instagram</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-12">
-              <div class="blog-post">
-                <div class="blog-thumb">
-                  <img src="assets/images/Image3.jpg" alt="">
-                </div>
-                <div class="down-content">
-                  <span>Conceptos</span>
-                  <a href="3_sistemas"><h4>Cliente-Servidor</h4></a>
-                  <p>Empez&oacute; a ser aceptado a finales de los años 80’ para referirse a las PC’s en red.<br>Su funcionamiento es de la siguiente
-                    manera, se tiene una m&aacute;quina cliente que requiere un servicio de una m&aacute;quina servidor, y &eacute;ste realiza la funci&oacute;n para la
-                    que está programado.Desde el punto de vista funcional, es una arquitectura distribuida que permite a los usuarios finales
-                    obtener acceso a la informaci&oacute;n a&uacute;n en los entornos multiplataforma.</p>
-                  <div class="post-options">
-                    <div class="row">
-                      <div class="col-6">
-                        <ul class="post-tags">
-                          <li><i class="fa fa-tags"></i></li>
-                          <li><a>UPT</a>,</li>
-                          <li><a>Tec&aacute;mac</a></li>
-                        </ul>
-                      </div>
-                      <div class="col-6">
-                        <ul class="post-share">
-                          <li><i class="fa fa-share-alt"></i></li>
-                          <li><a href="https://www.facebook.com/profile.php?id=100064101466027">Facebook</a>,</li>
-                          <li><a href="https://instagram.com/frankrosfo?utm_medium=copy_link">Instagram</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
             <div class="col-lg-12">
               <div class="main-button">
                 <a href="blog">Ver m&aacute;s Posts</a>
