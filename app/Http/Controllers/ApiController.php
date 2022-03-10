@@ -116,15 +116,15 @@ class ApiController extends Controller
     public function tabla(){
 
         $personajes = [];
-        
+
         for($id=1010300; $id<=1011500; $id++){
             // -- consumir detalles de personaje
             $cliente = new \GuzzleHttp\Client();    
-            $response = $cliente->request('GET', 'https://gateway.marvel.com:443/v1/public/characters/'.$id.'?ts=1&apikey=06ffa280d1bafc06d930b43d6d8dd14b&hash=afda8720864a69268e1e8bedd7a23b60');
+            $response = $cliente->('GET', 'https://gateway.marvel.com:443/v1/public/characters/'.$id.'?ts=1&apikey=06ffa280d1bafc06d930b43d6d8dd14b&hash=afda8720864a69268e1e8bedd7a23b60');
+            
             $personajetabla = json_decode($response->getBody()->getContents(), true);
 
             // -- Recorrer elementos
-            
 
             foreach ($personajetabla['data']['results'] as $personaje) {
                 $personajes[] = [
