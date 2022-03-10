@@ -86,6 +86,6 @@ class ApiController extends Controller
                 ]
             ] */
         }
-        return view('index',['comic' => $datos_comics, 'comics' => $comics]);
+        return view('index',['comics' => $comics]);
     }
 }
