@@ -15,6 +15,18 @@ use App\Http\Controllers\GeneralController;
 | Rutas hacia la API-Marvel
 |
 */
+
+Route::get('/',[GeneralController::class, 'raiz'])->name('raiz');
+
+/*
+|--------------------------------------------------------------------------
+| Rutas Api
+|--------------------------------------------------------------------------
+|
+| Rutas hacia la API-Marvel
+|
+*/
+
 Route::get('/',[ApiController::class, 'comics'])->name('inicio');
 
 Route::get('/personajes',[ApiController::class, 'personajes'])->name('personajes');
@@ -68,10 +80,6 @@ Route::post('/mail', [MailController::class, 'getMail']);
 | Rutas para ver las vistas (->middleware('auth') = validar estar registrado)
 |
 */
-
-Route::get('/inicio', function () {
-    return view('index');
-})->name('inicio');
 
 Route::get('/contacto', function () {
     return view('contact');
