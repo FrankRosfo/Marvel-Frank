@@ -1,6 +1,6 @@
 @extends('template.fondo')
 @section('Logotipo')
-<a class="navbar-brand" href="inicio" ><h2>Blog A/F<em>.</em></h2></a>
+<a class="navbar-brand" href="inicio" ><h2>Marvel/Frank<em>.</em></h2></a>
 @endsection
 @section('Barra')
 <li class="nav-item active">
