@@ -16,7 +16,7 @@ use App\Http\Controllers\GeneralController;
 |
 */
 
-/* Route::get('/', [GeneralController::class,'raiz'])->name('raiz'); */
+Route::get('/', [GeneralController::class,'raiz'])->name('raiz');
 
 /*
 |--------------------------------------------------------------------------

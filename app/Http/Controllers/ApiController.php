@@ -71,7 +71,7 @@ class ApiController extends Controller
                 'thumbnail_path' => $comic['thumbnail']['path'],
                 'thumbnail_extension' => $comic['thumbnail']['extension'],
                 'series_name' => $comic['series']['name'],
-                'series_resourcdeURI' => $comic['series']['resourcdeURI']
+                'series_resourdeURI' => $comic['series']['resourceURI']
             ];
             foreach ($datos_comics['urls'] as $link) {
                 $links[] = [
