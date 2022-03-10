@@ -27,7 +27,7 @@ Route::get('/', [GeneralController::class,'raiz'])->name('raiz');
 |
 */
 
-Route::get('personajes',[ApiController::class, 'persnajes'])->name('personajes');
+Route::get('personajes',[ApiController::class, 'personajes'])->name('personajes');
 
 Route::get('detalles/{id}',[ApiController::class, 'detallePersonaje'])->name('detalle.personaje');
 
