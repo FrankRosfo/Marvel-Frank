@@ -2,11 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\MailController;
-use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\SessionController;
-use App\Http\Controllers\ApiController;
-use App\Http\Controllers\GeneralController;
+use App\Http\Controllers\MailController;            //Controlador de correo
+use App\Http\Controllers\RegisterController;        //Controlador de Registro
+use App\Http\Controllers\SessionController;         //Controlador de Secion
+use App\Http\Controllers\GeneralController;         //Controlador de inicio
+use App\Http\Controllers\PersonajesApiController;   //Controlador Api de personajes
+use App\Http\Controllers\ComicsApiController;       //Controlador Api de Comics
 
 /*
 |--------------------------------------------------------------------------
