@@ -71,14 +71,20 @@ class ApiController extends Controller
                 'thumbnail_path' => $comic['thumbnail']['path'],
                 'thumbnail_extension' => $comic['thumbnail']['extension'],
                 'series_name' => $comic['series']['name'],
-                'series_resourcdeURI' => $comic['series']['resourcdeURI']
-                /* 'link' => $comic['urls'] = [
-                    $link[] = [
-                        'type' => $comic['type'],
-                        'url' => $comic['url']
-                    ]
-                ] */
+                'series_resourcdeURI' => $comic['series']['resourcdeURI'],
             ];
+            foreach ($datos_comics['urls'] as $link) {
+                $links[] = [
+                    'type' => $link['type'],
+                    'url' => $link['url']
+                ];
+            }
+            /* 'link' => $comic['urls'] = [
+                $link[] = [
+                    'type' => $comic['type'],
+                    'url' => $comic['url']
+                ]
+            ] */
         }
         return view('index',['comics' => $comics]);
     }
