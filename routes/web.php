@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionController;
@@ -9,37 +10,38 @@ use App\Http\Controllers\GeneralController;
 
 /*
 |--------------------------------------------------------------------------
-| Rutas Api
+| Ruta Raiz / Ruta raiz para enviar a un inicio
 |--------------------------------------------------------------------------
-|
-| Rutas hacia la API-Marvel
-|
 */
 
 Route::get('/',[GeneralController::class, 'raiz'])->name('raiz');
 
 /*
 |--------------------------------------------------------------------------
-| Rutas Api
+| Rutas Api / Rutas hacia la API-Marvel / personajes
 |--------------------------------------------------------------------------
-|
-| Rutas hacia la API-Marvel
-|
+*/
+
+Route::get('/personajes',[ApiController::class, 'personajes'])->name('personajes');
+
+Route::get('/detapersonajes/{id}',[ApiController::class, 'detallePersonajes'])->name('detalle.personaje');
+
+Route::get('/tablapersonajes',[ApiController::class, 'tabla'])->name('tabla.personaje');
+
+/*
+|--------------------------------------------------------------------------
+| Rutas Api / Rutas hacia la API-Marvel / comics
+|--------------------------------------------------------------------------
 */
 
 Route::get('/comics',[ApiController::class, 'comics'])->name('inicio');
 
-Route::get('/personajes',[ApiController::class, 'personajes'])->name('personajes');
-
-Route::get('detalles/{id}',[ApiController::class, 'detallePersonaje'])->name('detalle.personaje');
+Route::get('detacomics/{id}',[ApiController::class, 'detalleComics'])->name('detalle.comic');
 
 /*
 |--------------------------------------------------------------------------
-| Rutas de registro
+| Rutas de registro / Rutas para el registro y guardar datos
 |--------------------------------------------------------------------------
-|
-| Rutas para el registro y guardar datos
-|
 */
 
 Route::post('/registro', [RegisterController::class, 'guardar'])->name('registro.guardar');
@@ -48,11 +50,8 @@ Route::get('/registro', [RegisterController::class, 'create'])->middleware('gues
 
 /*
 |--------------------------------------------------------------------------
-| Rutas de login y logout
+| Rutas de login y logout / Rutas para el registro y guardar datos
 |--------------------------------------------------------------------------
-|
-| Rutas para el registro y guardar datos
-|
 */
 
 Route::post('/login', [SessionController::class, 'ingresar'])->name('login.ingresar');
@@ -63,22 +62,17 @@ Route::get('/logout', [SessionController::class, 'destroy'])->middleware('auth')
 
 /*
 |--------------------------------------------------------------------------
-| Rutas de correo
+| Rutas de correo / Rutas para enviar correos
 |--------------------------------------------------------------------------
-|
-| Rutas para enviar correos
-|
 */
 
 Route::post('/mail', [MailController::class, 'getMail']);
 
 /*
 |--------------------------------------------------------------------------
-| Rutas de vistas
+| Rutas de vistas / Rutas para ver las vistas (->middleware('auth') = 
+| validar estar registrado)
 |--------------------------------------------------------------------------
-|
-| Rutas para ver las vistas (->middleware('auth') = validar estar registrado)
-|
 */
 
 Route::get('/contacto', function () {
