@@ -73,11 +73,17 @@ https://templatemo.com/tm-551-stand-blog
                         <li class="nav-item">
                             <a class="nav-link" href="logout">Cerrar Secion</a>
                         </li>
-                        <div class="sidebar-item search">
-                            <form id="search_form" name="gs" method="GET" action="#">
-                                <input type="text" name="q" class="searchText" placeholder="type to search..." autocomplete="on">
-                            </form>
-                        </div>
+                        <li id="searchform">
+                            <div>
+                                <form action="#" method="post">
+                                    <fieldset>
+                                        <legend>Buscar:</legend>
+                                        <input type="text" placeholder="Buscar&hellip;">
+                                        <button type="submit"><i class="fas fa-search"></i></button>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
