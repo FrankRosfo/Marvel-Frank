@@ -12,11 +12,11 @@ class PersonajesApiController extends Controller
      */
     public function personajes($page){
 
-        $numero = ($page * 6) - 6;
+        $numero = ($page * 10) - 10;
 
         // -- consumir api Marvel
         $cliente = new \GuzzleHttp\Client();
-        $response = $cliente->request('GET', 'https://gateway.marvel.com:443/v1/public/characters?limit=6&offset='.$numero.'&ts=1&apikey=06ffa280d1bafc06d930b43d6d8dd14b&hash=afda8720864a69268e1e8bedd7a23b60');
+        $response = $cliente->request('GET', 'https://gateway.marvel.com:443/v1/public/characters?limit=10&offset='.$numero.'&ts=1&apikey=06ffa280d1bafc06d930b43d6d8dd14b&hash=afda8720864a69268e1e8bedd7a23b60');
         $datos = json_decode($response->getBody()->getContents(), true);
 
         // -- Recorrer elementos
