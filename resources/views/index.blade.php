@@ -122,7 +122,7 @@
             @endforeach
             <div class="col-lg-12">
               <div class="main-button">
-                <a href="blog">Ver m&aacute;s Posts</a>
+                <a href="personajes">Ver m&aacute;s Personajes</a>
               </div>
             </div>
           </div>
