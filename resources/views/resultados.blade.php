@@ -77,7 +77,7 @@
                 <div class="down-content">
                   <span>Comic</span>
                   <a href="contenido"><h4>{{ $comic['titulo'] }}</h4></a>
-                  {{ $personaje['series_name'] }} 
+                  {{ $comic['series_name'] }} 
                   <div class="post-options">
                     <div class="row">
                       <div class="col-lg-12">
