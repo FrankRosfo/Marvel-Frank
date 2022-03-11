@@ -25,7 +25,7 @@ Route::get('/inicio',[GeneralController::class, 'inicio'])->middleware('auth')->
 |--------------------------------------------------------------------------
 */
 
-Route::get('/personajes/{page}',[PersonajesApiController::class, 'personajes'])->middleware('auth')->name('personajes');
+Route::get('/personajes/{page}',[PersonajesApiController::class, 'personajes'])->name('personajes');
 
 Route::get('/detapersonajes/{id}',[PersonajesApiController::class, 'detallePersonajes'])->middleware('auth')->name('detalle.personaje');
 
