@@ -19,7 +19,7 @@ class RegisterController extends Controller
      * Guardar
      * Guarda en la BD el usuario y redirige a la ruta login
      */
-    public function guardar(Request $datos){
+    public function guardar(){
         $user = User::create(request(['name', 'email', 'password']));
         auth()->login($user);
         return redirect()->to('login');

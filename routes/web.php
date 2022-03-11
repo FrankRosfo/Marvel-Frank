@@ -19,7 +19,7 @@ Route::get('/',[GeneralController::class, 'raiz'])->name('raiz');
 
 Route::get('/inicio',[GeneralController::class, 'inicio'])->middleware('auth')->name('inicio');
 
-Route::get('/resultados/{name}',[GeneralController::class, 'buscar'])->middleware('auth')->name('buscar');
+Route::get('/resultados',[GeneralController::class, 'buscar'])->name('buscar');
 
 /*
 |--------------------------------------------------------------------------

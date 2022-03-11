@@ -50,7 +50,9 @@ class GeneralController extends Controller
      * consumir personajes de API para mostrar
      * en el inicio principal
      */
-    public function buscar($name){
+    public function buscar(Request $dato){
+
+        $name = $dato -> search_form;
 
         // -- consumir api Marvel
         $cliente = new \GuzzleHttp\Client();
@@ -71,6 +73,6 @@ class GeneralController extends Controller
                 'comics_numero' => $personaje['comics']['available'],
             ];
         }
-        return view('resultados',['personajes' => $personajes]);
+        return view('resultados',['personajes' => $personajes, 'name' => $name]);
     }
 }
