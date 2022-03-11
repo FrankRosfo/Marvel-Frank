@@ -55,7 +55,7 @@ https://templatemo.com/tm-551-stand-blog
                             <a class="nav-link" href="http://marvel-frank.herokuapp.com/logout">Cerrar Secion</a>
                         </li>
                         <div class="sidebar-item search">
-                            <form id="search_form" name="gs" method="post" action="http://marvel-frank.herokuapp.com/resultados">
+                            <form id="search_form" name="gs" method="post" action="{{route('resultados')}}">
                                 @csrf
                                 <input type="text" name="q" class="searchText" placeholder="Buscar..." autocomplete="on">
                             </form>
