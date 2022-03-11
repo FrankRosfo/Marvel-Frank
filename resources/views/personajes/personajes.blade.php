@@ -1,4 +1,7 @@
 @extends('template.fondo')
+@section('Logotipo')
+<a class="navbar-brand" href="http://marvel-frank.herokuapp.com/Inicio" ><h2>Marvel/Frank<em>.</em></h2></a>
+@endsection
 @section('Barra')
   <li class="nav-item">
     <a class="nav-link" href="inicio">Inicio</a>
