@@ -1,8 +1,8 @@
 @extends('template.sesion') {{-- HOME SESION --}}
-@section('Logotipo2')
-<a class="navbar-brand" href="/" ><h2>Marvel/Frank<em>.</em></h2></a>
+@section('Logotipo')
+<a class="navbar-brand" href="registro" ><h2>Marvel/Frank<em>.</em></h2></a>
 @endsection
-@section('Barra2')
+@section('Barra')
 <li class="nav-item">
   <a class="nav-link" href="login">Iniciar Sesi&oacute;n</a>
 </li>

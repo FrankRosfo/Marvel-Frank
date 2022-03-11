@@ -1,10 +1,10 @@
 @extends('template.sesion')
-@section('Logotipo2')
-<a class="navbar-brand" href="login" ><h2>Blog A/F<em>.</em></h2></a>
+@section('Logotipo')
+<a class="navbar-brand" href="login" ><h2>Marvel/Frank<em>.</em></h2></a>
 @endsection
-@section('Barra2')
+@section('Barra')
 <li class="nav-item">
-  <a class="nav-link" href="/">Registrarse</a>
+  <a class="nav-link" href="registrarse">Registrarse</a>
 </li>
 @endsection
 @section('Descript')
