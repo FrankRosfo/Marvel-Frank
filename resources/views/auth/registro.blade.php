@@ -16,7 +16,7 @@
     <h2>Registro</h2>
 </div>
 <div class="content">
-    <form action="/" method="post">
+    <form action="/registro" method="post">
         @csrf
         <div class="row">
             <div class="col-sm-12">
