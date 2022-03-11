@@ -1,4 +1,3 @@
-@if(auth()->check())
 @extends('template.fondo')
 @section('Logotipo')
 <a class="navbar-brand" href="inicio" ><h2>Marvel/Frank<em>.</em></h2></a>
@@ -20,6 +19,7 @@
   </li>
 @endsection
 @section('Contenido')
+@if(auth()->check())
 <!-- Page Content -->
 <!-- Banner Starts Here -->
 <div class="main-banner header-text">
@@ -207,5 +207,5 @@
     </div>
   </div>
 </section>
-@endsection
 @endif
+@endsection

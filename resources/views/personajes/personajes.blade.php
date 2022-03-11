@@ -1,4 +1,3 @@
-@if(auth()->check())
 @extends('template.fondo')
 @section('Logotipo')
 <a class="navbar-brand" href="http://marvel-frank.herokuapp.com/inicio" ><h2>Marvel/Frank<em>.</em></h2></a>
@@ -145,4 +144,3 @@
   </div>
 </section>
 @endsection
-@endif
