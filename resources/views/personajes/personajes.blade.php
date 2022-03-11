@@ -70,12 +70,9 @@
             @endforeach
             <div class="col-lg-12">
               <ul class="page-numbers">
-                @if($page > 1)
-                  <li><a href="{{route('personajes',$page-1)}}"><i class="fa fa-angle-double-left"></i></a></li>
-                @endif
+                <li><a href="{{route('personajes',$page-1)}}"><i class="fa fa-angle-double-left"></i></a></li>
                 <li class="active"><a href="{{route('personajes',$page)}}">{{ $page }}</a></li>
-                @if($page < 150)
-                  <li><a href="{{route('personajes',$page+1)}}"><i class="fa fa-angle-double-right"></i></a></li>
+                <li><a href="{{route('personajes',$page+1)}}"><i class="fa fa-angle-double-right"></i></a></li>
                 @endif
               </ul>
             </div>
