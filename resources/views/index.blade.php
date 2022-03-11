@@ -135,7 +135,7 @@
             @endforeach
             <div class="col-lg-12">
               <div class="main-button">
-                <a href="personajes">Ver m&aacute;s Personajes</a>
+                <a href="{{route('personajes',$page=1)}}">Ver m&aacute;s Personajes</a>
               </div>
             </div>
           </div>
