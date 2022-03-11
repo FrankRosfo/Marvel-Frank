@@ -50,26 +50,7 @@ https://templatemo.com/tm-551-stand-blog
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="inicio">Inicio
-                                @yield('A_Inicio')
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="personajes">Personajes
-                                @yield('A_Personajes')
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="personajes">Comics
-                                @yield('A_Comics')
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto">Contacto
-                                @yield('A_Contacto')
-                            </a>
-                        </li>
+                        @yield('Barra')
                         <li class="nav-item">
                             <a class="nav-link" href="logout">Cerrar Secion</a>
                         </li>

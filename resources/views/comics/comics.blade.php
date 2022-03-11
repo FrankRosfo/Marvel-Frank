@@ -1,6 +1,19 @@
 @extends('template.fondo')
-@section('A_Comics')
-  <span class="sr-only">(current)</span>
+@section('Barra')
+  <li class="nav-item">
+    <a class="nav-link" href="inicio">Inicio</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="personajes">Personajes</a>
+  </li>
+  <li class="nav-item active">
+    <a class="nav-link" href="personajes">Comics
+      <span class="sr-only">(current)</span>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="contacto">Contacto</a>
+  </li>
 @endsection
 @section('Contenido')
 @if(auth()->check())
@@ -239,6 +252,14 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="col-lg-12">
+              <ul class="page-numbers">
+                <li><a href="#">1</a></li>
+                <li class="active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+              </ul>
             </div>
           </div>
         </div>

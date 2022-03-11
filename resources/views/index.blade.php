@@ -2,8 +2,21 @@
 @section('Logotipo')
 <a class="navbar-brand" href="inicio" ><h2>Marvel/Frank<em>.</em></h2></a>
 @endsection
-@section('A_Inicio')
-  <span class="sr-only">(current)</span>
+@section('Barra')
+  <li class="nav-item active">
+    <a class="nav-link" href="inicio">Inicio
+      <span class="sr-only">(current)</span>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="personajes">Personajes</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="personajes">Comics</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="contacto">Contacto</a>
+  </li>
 @endsection
 @section('Contenido')
 @if(auth()->check())
