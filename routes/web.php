@@ -19,6 +19,8 @@ Route::get('/',[GeneralController::class, 'raiz'])->name('raiz');
 
 Route::get('/inicio',[GeneralController::class, 'inicio'])->middleware('auth')->name('inicio');
 
+Route::get('/resultados/{name}',[GeneralController::class, 'buscar'])->middleware('auth')->name('buscar');
+
 /*
 |--------------------------------------------------------------------------
 | Rutas Api / Rutas hacia la API-Marvel / personajes

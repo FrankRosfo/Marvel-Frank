@@ -50,7 +50,7 @@
                   <img src="{{ $personaje['imagen'] }}.{{ $personaje['imagen_extension'] }}" alt="">
                 </div>
                 <div class="down-content">
-                  <span>Conceptos</span>
+                  <span>Marvel</span>
                   <a href="contenido"><h4>{{ $personaje['nombre'] }}</h4></a>
                   {{ $personaje['descripcion'] }} 
                   <div class="post-options">
@@ -68,17 +68,6 @@
               </div>
             </div>
             @endforeach
-            <div class="col-lg-12">
-              <ul class="page-numbers">
-                @if($page>1)
-                <li><a href="{{route('personajes',$page-1)}}"><i class="fa fa-angle-double-left"></i></a></li>
-                @endif
-                  <li class="active"><a href="{{route('personajes',$page)}}">{{ $page }}</a></li>
-                @if($page<156)
-                <li><a href="{{route('personajes',$page+1)}}"><i class="fa fa-angle-double-right"></i></a></li>
-                @endif
-              </ul>
-            </div>
           </div>
         </div>
       </div>
