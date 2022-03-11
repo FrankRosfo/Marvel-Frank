@@ -73,7 +73,6 @@
                 <li><a href="{{route('personajes',$page-1)}}"><i class="fa fa-angle-double-left"></i></a></li>
                 <li class="active"><a href="{{route('personajes',$page)}}">{{ $page }}</a></li>
                 <li><a href="{{route('personajes',$page+1)}}"><i class="fa fa-angle-double-right"></i></a></li>
-                @endif
               </ul>
             </div>
           </div>
