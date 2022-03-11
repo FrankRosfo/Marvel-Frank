@@ -17,6 +17,7 @@
 @endsection
 
 @section('Contenido')
+@if(auth()->check())
 <!-- Page Content -->
 <!-- Banner Starts Here -->
 <div class="heading-page header-text">
@@ -109,8 +110,8 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3755.9643050922386!2d-98.98036838508888!3d19.71414378672505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ed2fa5d3a6c1%3A0x1f383377175dc58a!2sUniversidad%20Politecnica%20de%20Tecamac!5e0!3m2!1ses-419!2smx!4v1643115676597!5m2!1ses-419!2smx" width="100%" height="450px" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
       </div>
-
     </div>
   </div>
 </section>
+@endif
 @endsection

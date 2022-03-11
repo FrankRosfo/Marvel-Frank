@@ -57,9 +57,9 @@ Route::post('/registro', [RegisterController::class, 'guardar'])->name('registro
 
 Route::get('/login', [SessionController::class, 'create'])->middleware('guest')->name('login');
 
-Route::get('/logout', [SessionController::class, 'destroy'])->middleware('auth')->name('login.destroy');
-
 Route::post('/login', [SessionController::class, 'ingresar'])->name('login.ingresar');
+
+Route::get('/logout', [SessionController::class, 'destroy'])->middleware('auth')->name('login.destroy');
 
 /*
 |--------------------------------------------------------------------------
@@ -79,11 +79,3 @@ Route::post('/mail', [MailController::class, 'getMail']);
 Route::get('/contacto', function () {
     return view('contact');
 })->name('contacto');
-
-Route::get('/blog', function () {
-    return view('blog');
-})->name('blog');
-
-Route::get('/detalles', function () {
-    return view('details');
-})->name('Detalles');

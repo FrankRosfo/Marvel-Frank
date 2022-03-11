@@ -24,7 +24,7 @@
 </div>
 @endsection
 @section('Contenido')
-{{-- @if(auth()->check()) --}}
+@if(auth()->check())
 <!-- Page Content -->
 <!-- Banner Starts Here -->
 <div class="main-banner header-text">
@@ -212,5 +212,5 @@
     </div>
   </div>
 </section>
-{{-- @endif --}}
+@endif
 @endsection

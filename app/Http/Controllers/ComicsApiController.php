@@ -34,7 +34,7 @@ class ComicsApiController extends Controller
                 ];
             } */
         }
-        return view('index',['comics' => $comics]);
+        return view('comics.comics',['comics' => $comics]);
     }
 
     public function detalleComics($id){
@@ -64,6 +64,6 @@ class ComicsApiController extends Controller
                 ];
             } */
         }
-        return view('detalles',['comic' => $comicIndividual, 'comics' => $comics]);
+        return view('comics.comic',['comic' => $comicIndividual, 'comics' => $comics]);
     }
 }

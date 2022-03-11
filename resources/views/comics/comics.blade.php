@@ -17,6 +17,7 @@
 @endsection
 
 @section('Contenido')
+@if(auth()->check())
 <!-- Page Content -->
 <!-- Banner Starts Here -->
 <div class="heading-page header-text">
@@ -322,4 +323,5 @@
     </div>
   </div>
 </section>
+@endif
 @endsection

@@ -26,8 +26,7 @@ class PersonajesApiController extends Controller
                 'comics_numero' => $personaje['comics']['available'],
             ];
         }
-
-        return view('index',['personajes' => $personajes]);
+        return view('personajes.personajes',['personajes' => $personajes]);
     }
 
     public function detallePersonajes($id){
@@ -51,6 +50,6 @@ class PersonajesApiController extends Controller
                 'comics_numero' => $personaje['comics']['available'],
             ];
         }
-        return view('datalles',['personaje' => $personajeIndividual, 'personajes' => $personajes]);
+        return view('personajes.personaje',['personaje' => $personajeIndividual, 'personajes' => $personajes]);
     }
 }
