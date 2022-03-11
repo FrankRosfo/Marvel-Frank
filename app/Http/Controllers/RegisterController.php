@@ -15,7 +15,7 @@ class RegisterController extends Controller
         $Contra = $datos -> password;
         $Conf_Contra = $datos -> conf_password;
         if($Conf_Contra != $Contra){
-            return view('contac');
+            return view('contact');
             /* $user = User::create(request(['name', 'email', 'password']));
             auth()->login($user);
             return redirect()->to('login'); */
