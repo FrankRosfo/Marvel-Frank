@@ -17,7 +17,7 @@ use App\Http\Controllers\ComicsApiController;       //Controlador Api de Comics
 
 Route::get('/',[GeneralController::class, 'raiz'])->name('raiz');
 
-Route::get('/inicio',[GeneralController::class, 'inicio'])->name('inicio');
+Route::get('/inicio',[GeneralController::class, 'inicio'])->middleware('auth')->name('inicio');
 
 /*
 |--------------------------------------------------------------------------
@@ -25,9 +25,9 @@ Route::get('/inicio',[GeneralController::class, 'inicio'])->name('inicio');
 |--------------------------------------------------------------------------
 */
 
-Route::get('/personajes/{page}',[PersonajesApiController::class, 'personajes'])->name('personajes');
+Route::get('/personajes/{page}',[PersonajesApiController::class, 'personajes'])->middleware('auth')->name('personajes');
 
-Route::get('/detapersonajes/{id}',[PersonajesApiController::class, 'detallePersonajes'])->name('detalle.personaje');
+Route::get('/detapersonajes/{id}',[PersonajesApiController::class, 'detallePersonajes'])->middleware('auth')->name('detalle.personaje');
 
 /*
 |--------------------------------------------------------------------------
@@ -35,9 +35,9 @@ Route::get('/detapersonajes/{id}',[PersonajesApiController::class, 'detallePerso
 |--------------------------------------------------------------------------
 */
 
-Route::get('/comics',[ComicsApiController::class, 'comics'])->name('comics');
+Route::get('/comics',[ComicsApiController::class, 'comics'])->middleware('auth')->name('comics');
 
-Route::get('detacomics/{id}',[ComicsApiController::class, 'detalleComics'])->name('detalle.comic');
+Route::get('detacomics/{id}',[ComicsApiController::class, 'detalleComics'])->middleware('auth')->name('detalle.comic');
 
 /*
 |--------------------------------------------------------------------------
