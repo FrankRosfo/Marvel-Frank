@@ -57,7 +57,7 @@ https://templatemo.com/tm-551-stand-blog
                         <div class="sidebar-item search">
                             <form id="search_form" name="gs" method="post" action="{{route('resultados')}}">
                                 @csrf
-                                <input type="text" name="q" class="searchText" placeholder="Buscar..." autocomplete="on">
+                                <input type="text" id="search" name="q" class="searchText" placeholder="Buscar..." autocomplete="on">
                             </form>
                         </div>
                     </ul>

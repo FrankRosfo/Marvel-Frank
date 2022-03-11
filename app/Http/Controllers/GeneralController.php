@@ -53,8 +53,7 @@ class GeneralController extends Controller
     public function buscar(Request $dato){
 
         //$name = $dato -> search_form;
-        $name = $dato -> gs;
-        //$name = $dato -> q;
+        $name = $dato -> q;
 
         // -- consumir api Marvel
         $cliente = new \GuzzleHttp\Client();
