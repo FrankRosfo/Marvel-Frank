@@ -1,4 +1,4 @@
-@extends('blog.template.fondo')
+@extends('template.fondo')
 @section('Logotipo')
 @yield('Logotipo2')
 @endsection
