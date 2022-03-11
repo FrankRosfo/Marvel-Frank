@@ -78,4 +78,4 @@ Route::post('/mail', [MailController::class, 'getMail']);
 
 Route::get('/contacto', function () {
     return view('contact');
-})->name('contacto');
+})->middleware('auth')->name('contacto');
