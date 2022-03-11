@@ -12,13 +12,13 @@
     <title>Marvel/Frank</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-stand-blog.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="/assets/css/templatemo-stand-blog.css">
+    <link rel="stylesheet" href="/assets/css/owl.css">
 <!--
 
 TemplateMo 551 Stand Blog
@@ -238,16 +238,16 @@ https://templatemo.com/tm-551-stand-blog
 
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 
     <!-- Additional Scripts -->
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/owl.js"></script>
-    <script src="assets/js/slick.js"></script>
-    <script src="assets/js/isotope.js"></script>
-    <script src="assets/js/accordions.js"></script>
+    <script src="/assets/js/custom.js"></script>
+    <script src="/assets/js/owl.js"></script>
+    <script src="/assets/js/slick.js"></script>
+    <script src="/assets/js/isotope.js"></script>
+    <script src="/assets/js/accordions.js"></script>
 
 
     <script language = "text/Javascript"> 
