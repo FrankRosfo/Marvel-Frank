@@ -1,21 +1,21 @@
 @extends('template.fondo')
 @section('Logotipo')
-<a class="navbar-brand" href="http://marvel-frank.herokuapp.com/inicio" ><h2>Marvel/Frank<em>.</em></h2></a>
+<a class="navbar-brand" href="inicio" ><h2>Marvel/Frank<em>.</em></h2></a>
 @endsection
 @section('Barra')
   <li class="nav-item">
-    <a class="nav-link" href="http://marvel-frank.herokuapp.com/inicio">Inicio</a>
+    <a class="nav-link" href="inicio">Inicio</a>
   </li>
   <li class="nav-item active">
-    <a class="nav-link" href="http://marvel-frank.herokuapp.com/personajes">Personajes
+    <a class="nav-link" href="personajes">Personajes
       <span class="sr-only">(current)</span>
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="http://marvel-frank.herokuapp.com/comics">Comics</a>
+    <a class="nav-link" href="comics">Comics</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="http://marvel-frank.herokuapp.com/contacto">Contacto</a>
+    <a class="nav-link" href="contacto">Contacto</a>
   </li>
 @endsection
 @section('Contenido')
@@ -50,7 +50,7 @@
                   <img src="{{ $personaje['imagen'] }}.{{ $personaje['imagen_extension'] }}" alt="">
                 </div>
                 <div class="down-content">
-                  <span>Marvel</span>
+                  <span>Personaje</span>
                   <a href="contenido"><h4>{{ $personaje['nombre'] }}</h4></a>
                   {{ $personaje['descripcion'] }} 
                   <div class="post-options">
@@ -60,6 +60,31 @@
                           <li><i class="fa fa-tags"></i></li>
                           <li><a>Comics:</a>,</li>
                           <li><a>{{ $personaje['comics_numero'] }}</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            @endforeach
+            @foreach($comics as $comic)
+            <div class="col-lg-6">
+              <div class="blog-post">
+                <div class="blog-thumb">
+                  <img src="{{ $comic['imagen'] }}.{{ $comic['imagen_extension'] }}" alt="">
+                </div>
+                <div class="down-content">
+                  <span>Comic</span>
+                  <a href="contenido"><h4>{{ $comic['titulo'] }}</h4></a>
+                  {{ $personaje['series_name'] }} 
+                  <div class="post-options">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <ul class="post-tags">
+                          <li><i class="fa fa-tags"></i></li>
+                          <li><a>Paginas:</a>,</li>
+                          <li><a>{{ $personaje['n_paginas'] }}</a></li>
                         </ul>
                       </div>
                     </div>
