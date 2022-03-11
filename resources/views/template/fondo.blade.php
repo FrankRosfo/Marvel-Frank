@@ -69,7 +69,7 @@ https://templatemo.com/tm-551-stand-blog
                 </div>
                 <div class="col-lg-12">
                     <div class="copyright-text">
-                        <p>Copyright 2022 Blog A/F.| Design: <a rel="nofollow" href="https://templatemo.com" target="_parent">TemplateMo</a></p>
+                        <p>Copyright 2022 Marvel/Frank.| Design: <a rel="nofollow" href="https://templatemo.com" target="_parent">Frank</a></p>
                     </div>
                 </div>
             </div>

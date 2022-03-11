@@ -1,6 +1,6 @@
-@extends('blog.template.sesion') {{-- HOME SESION --}}
+@extends('template.sesion') {{-- HOME SESION --}}
 @section('Logotipo2')
-<a class="navbar-brand" href="/" ><h2>Blog A/F<em>.</em></h2></a>
+<a class="navbar-brand" href="/" ><h2>Marvel/Frank<em>.</em></h2></a>
 @endsection
 @section('Barra2')
 <li class="nav-item">
@@ -32,6 +32,11 @@
             <div class="col-sm-12">
                 <fieldset>
                     <input name="password" type="text" id="password" placeholder="Contraseña" required="">
+                </fieldset>
+            </div>
+            <div class="col-sm-12">
+                <fieldset>
+                    <input name="password" type="text" id="conf_password" placeholder="Confirmar Contraseña" required="">
                 </fieldset>
             </div>
             <div class="col-lg-12">

@@ -1,4 +1,4 @@
-@extends('blog.template.sesion')
+@extends('template.sesion')
 @section('Logotipo2')
 <a class="navbar-brand" href="login" ><h2>Blog A/F<em>.</em></h2></a>
 @endsection

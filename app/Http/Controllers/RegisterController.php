@@ -11,10 +11,15 @@ class RegisterController extends Controller
         return view('auth.registro');
     }
 
-    public function guardar(){
-        $user = User::create(request(['name', 'email', 'password']));
-        auth()->login($user);
-        return redirect()->to('login');
-        
+    public function guardar(Request $datos){
+        $Contra = $datos -> password;
+        $Conf_Contra = $datos -> conf_password;
+        if($Contra == $Conf_Contra){
+            alert('Entro al if');
+            /* $user = User::create(request(['name', 'email', 'password']));
+            auth()->login($user);
+            return redirect()->to('login'); */
+            
+        }
     }
 }

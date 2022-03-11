@@ -45,9 +45,9 @@ Route::get('detacomics/{id}',[ComicsApiController::class, 'detalleComics'])->nam
 |--------------------------------------------------------------------------
 */
 
-Route::post('/registro', [RegisterController::class, 'guardar'])->name('registro.guardar');
-
 Route::get('/registro', [RegisterController::class, 'create'])->middleware('guest')->name('registro');
+
+Route::post('/registro', [RegisterController::class, 'guardar'])->name('registro.guardar');
 
 /*
 |--------------------------------------------------------------------------
@@ -55,11 +55,11 @@ Route::get('/registro', [RegisterController::class, 'create'])->middleware('gues
 |--------------------------------------------------------------------------
 */
 
-Route::post('/login', [SessionController::class, 'ingresar'])->name('login.ingresar');
-
 Route::get('/login', [SessionController::class, 'create'])->middleware('guest')->name('login');
 
 Route::get('/logout', [SessionController::class, 'destroy'])->middleware('auth')->name('login.destroy');
+
+Route::post('/login', [SessionController::class, 'ingresar'])->name('login.ingresar');
 
 /*
 |--------------------------------------------------------------------------

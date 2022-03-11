@@ -11,7 +11,7 @@ class GeneralController extends Controller
      * return redirect()->route('inicio');
      */
     public function raiz(){
-        return redirect()->route('inicio');
+        return redirect()->route('registro');
     }
 
     public function inicio(){

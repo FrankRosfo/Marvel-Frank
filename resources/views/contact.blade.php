@@ -1,4 +1,4 @@
-@extends('blog.template.fondo')
+@extends('template.fondo')
 @section('Barra')
 <li class="nav-item">
   <a class="nav-link" href="/inicio">Inicio</a>
