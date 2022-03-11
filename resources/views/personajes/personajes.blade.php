@@ -50,7 +50,7 @@
                   <img src="{{ $personaje['imagen'] }}.{{ $personaje['imagen_extension'] }}" alt="">
                 </div>
                 <div class="down-content">
-                  <span>Conceptos</span>
+                  <span>Marvel</span>
                   <a href="contenido"><h4>{{ $personaje['nombre'] }}</h4></a>
                   {{ $personaje['descripcion'] }} 
                   <div class="post-options">
