@@ -21,7 +21,7 @@ class RegisterController extends Controller
             return redirect()->to('login'); */
         }
         else{
-            return view('contac');
+            return view('contact');
             /* $user = User::create(request(['name', 'email', 'password']));
             auth()->login($user);
             return redirect()->to('login'); */
