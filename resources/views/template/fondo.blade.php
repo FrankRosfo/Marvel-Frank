@@ -51,11 +51,11 @@ https://templatemo.com/tm-551-stand-blog
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         @yield('Barra')
-                        <li class="nav-item">
+                        <li class="nav-item"> 
                             <a class="nav-link" href="http://marvel-frank.herokuapp.com/logout">Cerrar Secion</a>
                         </li>
                         <div class="sidebar-item search">
-                            <form id="search_form" name="gs" method="post" action="resultados">
+                            <form id="search_form" name="gs" method="post" action="http://marvel-frank.herokuapp.com/resultados">
                                 @csrf
                                 <input type="text" name="q" class="searchText" placeholder="Buscar..." autocomplete="on">
                             </form>
