@@ -14,14 +14,14 @@ class RegisterController extends Controller
     public function guardar(Request $datos){
         $Contra = $datos -> password;
         $Conf_Contra = $datos -> conf_password;
-        if($Contra == $Conf_Contra){
+        if($Conf_Contra == $Contra){
             return view('blog');
             /* $user = User::create(request(['name', 'email', 'password']));
             auth()->login($user);
             return redirect()->to('login'); */
         }
         else{
-            return view('details');
+            return view('contac');
             /* $user = User::create(request(['name', 'email', 'password']));
             auth()->login($user);
             return redirect()->to('login'); */
