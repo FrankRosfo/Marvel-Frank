@@ -84,7 +84,7 @@
                         <ul class="post-tags">
                           <li><i class="fa fa-tags"></i></li>
                           <li><a>Paginas:</a>,</li>
-                          <li><a>{{ $personaje['n_paginas'] }}</a></li>
+                          <li><a>{{ $comic['n_paginas'] }}</a></li>
                         </ul>
                       </div>
                     </div>
