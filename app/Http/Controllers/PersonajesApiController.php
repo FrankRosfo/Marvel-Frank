@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class PersonajesApiController extends Controller
 {
+    /**
+     * Personajes
+     * Consumir Personajes de API
+     */
     public function personajes(){
         // -- consumir api Marvel
         $cliente = new \GuzzleHttp\Client();
@@ -28,7 +32,11 @@ class PersonajesApiController extends Controller
         }
         return view('personajes.personajes',['personajes' => $personajes]);
     }
-
+    
+    /**
+     * Personajes
+     * consumir un personaje de API atravez de ID
+     */
     public function detallePersonajes($id){
 
         // -- consumir detalles de personaje

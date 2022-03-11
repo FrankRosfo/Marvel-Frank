@@ -1,10 +1,16 @@
 @extends('template.fondo')
+@section('Logotipo')
+<a class="navbar-brand" href="inicio" ><h2>Marvel/Frank<em>.</em></h2></a>
+@endsection
 @section('Barra')
 <li class="nav-item">
-  <a class="nav-link" href="/inicio">Inicio</a>
+  <a class="nav-link" href="inicio">Inicio</a>
 </li>
 <li class="nav-item">
-  <a class="nav-link" href="blog">Blog</a>
+  <a class="nav-link" href="personajes">Personajes</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="comics">Comics</a>
 </li>
 <li class="nav-item active">
   <a class="nav-link" href="contacto">Contacto
@@ -14,8 +20,12 @@
 <li class="nav-item">
   <a class="nav-link" href="logout">Cerrar Sesi&oacute;n</a>
 </li>
+<div class="sidebar-item search">
+  <form id="search_form" name="gs" method="GET" action="#">
+    <input type="text" name="q" class="searchText" placeholder="type to search..." autocomplete="on">
+  </form>
+</div>
 @endsection
-
 @section('Contenido')
 @if(auth()->check())
 <!-- Page Content -->

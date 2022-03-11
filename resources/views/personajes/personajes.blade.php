@@ -1,21 +1,7 @@
 @extends('template.fondo')
-@section('Barra')
-<li class="nav-item">
-  <a class="nav-link" href="/inicio">Inicio</a>
-</li>
-<li class="nav-item active">
-  <a class="nav-link" href="blog">Blog
-    <span class="sr-only">(current)</span>
-  </a>
-</li>
-<li class="nav-item">
-  <a class="nav-link" href="contacto">Contacto</a>
-</li>
-<li class="nav-item">
-  <a class="nav-link" href="logout">Cerrar Sesi&oacute;n</a>
-</li>
+@section('A_Personajes')
+  <span class="sr-only">(current)</span>
 @endsection
-
 @section('Contenido')
 @if(auth()->check())
 <!-- Page Content -->

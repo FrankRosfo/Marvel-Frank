@@ -14,6 +14,11 @@ class GeneralController extends Controller
         return redirect()->route('registro');
     }
 
+    /**
+     * inicio
+     * consumir personajes de API para mostrar
+     * en el inicio principal
+     */
     public function inicio(){
 
         $numero = rand(0, 1497);

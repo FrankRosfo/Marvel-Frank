@@ -2,26 +2,8 @@
 @section('Logotipo')
 <a class="navbar-brand" href="inicio" ><h2>Marvel/Frank<em>.</em></h2></a>
 @endsection
-@section('Barra')
-<li class="nav-item active">
-  <a class="nav-link" href="inicio">Inicio
-    <span class="sr-only">(current)</span>
-  </a>
-</li>
-<li class="nav-item">
-  <a class="nav-link" href="blog">Blog</a>
-</li>
-<li class="nav-item">
-  <a class="nav-link" href="contacto">Contacto</a>
-</li>
-<li class="nav-item">
-  <a class="nav-link" href="logout">Cerrar Sesi&oacute;n</a>
-</li>
-<div class="sidebar-item search">
-  <form id="search_form" name="gs" method="GET" action="#">
-    <input type="text" name="q" class="searchText" placeholder="type to search..." autocomplete="on">
-  </form>
-</div>
+@section('A_Inicio')
+  <span class="sr-only">(current)</span>
 @endsection
 @section('Contenido')
 @if(auth()->check())

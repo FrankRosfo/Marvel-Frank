@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class ComicsApiController extends Controller
 {
+    /**
+     * Comics
+     * consumir comics de API
+     */
     public function comics(){
 
         // -- consumir comics
@@ -37,6 +41,10 @@ class ComicsApiController extends Controller
         return view('comics.comics',['comics' => $comics]);
     }
 
+    /**
+     * Comics
+     * consumir un comic de API atravez de ID
+     */
     public function detalleComics($id){
 
         // -- consumir detalles de personaje

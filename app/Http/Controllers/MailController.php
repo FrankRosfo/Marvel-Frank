@@ -8,6 +8,11 @@ use Mail;
 
 class MailController extends Controller
 {
+    /**
+     * getMail
+     * obtiene las variables para mandarlas a TestMail
+     * y poder formular el correo a enviar
+     */
     public function getMail(Request $datos){
         $Nombre = $datos -> name;
         $Correo = $datos -> email;

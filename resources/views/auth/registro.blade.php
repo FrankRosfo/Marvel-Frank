@@ -34,11 +34,6 @@
                     <input name="password" type="text" id="password" placeholder="Contraseña" required="">
                 </fieldset>
             </div>
-            <div class="col-sm-12">
-                <fieldset>
-                    <input name="password" type="text" id="conf_password" placeholder="Confirmar Contraseña" required="">
-                </fieldset>
-            </div>
             <div class="col-lg-12">
                 <fieldset>
                     <button type="submit" id="form-submit" class="main-button">Registrarse</button>
