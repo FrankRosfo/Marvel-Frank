@@ -26,8 +26,8 @@ class ComicsApiController extends Controller
                 'id' => $comic['id'],
                 'titulo' => $comic['title'],
                 'n_paginas' => $comic['pageCount'],
-                'thumbnail_path' => $comic['thumbnail']['path'],
-                'thumbnail_extension' => $comic['thumbnail']['extension'],
+                'imagen' => $comic['thumbnail']['path'],
+                'imagen_extension' => $comic['thumbnail']['extension'],
                 'series_name' => $comic['series']['name'],
                 'series_resourceURI' => $comic['series']['resourceURI']
             ];/* 
@@ -60,8 +60,8 @@ class ComicsApiController extends Controller
                 'id' => $comic['id'],
                 'titulo' => $comic['title'],
                 'n_paginas' => $comic['pageCount'],
-                'thumbnail_path' => $comic['thumbnail']['path'],
-                'thumbnail_extension' => $comic['thumbnail']['extension'],
+                'imagen' => $comic['thumbnail']['path'],
+                'imagen_extension' => $comic['thumbnail']['extension'],
                 'series_name' => $comic['series']['name'],
                 'series_resourceURI' => $comic['series']['resourceURI']
             ];/* 
