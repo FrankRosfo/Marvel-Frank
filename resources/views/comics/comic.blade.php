@@ -1,3 +1,4 @@
+@if(auth()->check())
 @extends('blog.template.details')
 @section('Barra')
 <li class="nav-item active">
@@ -17,3 +18,4 @@
 <br><br>La importancia de un sistema de información radica en la eficiencia en la correlación de una gran cantidad de datos ingresados a través de procesos diseñados para cada área con el objetivo de producir información válida para la posterior toma de decisiones.
 </p>
 @endsection
+@endif
