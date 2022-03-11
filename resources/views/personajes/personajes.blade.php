@@ -78,6 +78,7 @@
                 @if($page<150){
                   <li><a href="{{route('personajes',$page+1)}}"><i class="fa fa-angle-double-right"></i></a></li>
                 }
+                @endif
               </ul>
             </div>
           </div>
