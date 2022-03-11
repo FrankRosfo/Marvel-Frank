@@ -9,7 +9,7 @@
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="personajes">Comics</a>
+    <a class="nav-link" href="comics">Comics</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="contacto">Contacto</a>
@@ -67,8 +67,8 @@
             @endforeach
             <div class="col-lg-12">
               <ul class="page-numbers">
-                <li><a href="{{route('pagina.personaje',$page)}}">{{ $page }}</a></li>
-                <li><a href="{{route('pagina.personaje',$page+1)}}"><i class="fa fa-angle-double-right"></i></a></li>
+                <li><a href="{{route('personajes',$page)}}">{{ $page }}</a></li>
+                <li><a href="{{route('personajes',$page+1)}}"><i class="fa fa-angle-double-right"></i></a></li>
               </ul>
             </div>
           </div>
