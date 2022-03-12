@@ -47,7 +47,7 @@
             <div class="col-lg-12">
               <div class="blog-post">
                 <div class="blog-thumb">
-                  <img src="{{ $personaje['thumbnail']['path'] }}.{{ $personaje['thumbnail']['extension'] }}" alt="">
+                  <img src="{{ $personaje['imagen'] }}.{{ $personaje['thumbnail']['extension'] }}" alt="">
                 </div>
                 <div class="down-content">
                   <span>Marvel</span>

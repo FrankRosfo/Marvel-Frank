@@ -59,10 +59,10 @@ class ComicsApiController extends Controller
         $comicIndividual = json_decode($response->getBody()->getContents(), true);
 
         // -- Recorrer elementos
-        $comics = [];
+        /* $comics = []; */
 
-        foreach ($pcomicIndividual['data']['results'] as $comic) {
-            $comics[] = [
+        foreach ($comicIndividual['data']['results'] as $comic) {
+            $comics = [
                 'id' => $comic['id'],
                 'titulo' => $comic['title'],
                 'n_paginas' => $comic['pageCount'],

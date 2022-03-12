@@ -51,6 +51,8 @@ class PersonajesApiController extends Controller
         $response = $cliente->request('GET', 'https://gateway.marvel.com:443/v1/public/characters/'.$id.'?ts=1&apikey=06ffa280d1bafc06d930b43d6d8dd14b&hash=afda8720864a69268e1e8bedd7a23b60');
         $personajeIndividual = json_decode($response->getBody()->getContents(), true);
 
+       /*  $personajes = []; */
+
         foreach ($personajeIndividual['data']['results'] as $personaje) {
             $personajes = [
                 'id' => $personaje['id'],
