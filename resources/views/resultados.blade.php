@@ -51,7 +51,7 @@
                 </div>
                 <div class="down-content">
                   <span>Personaje</span>
-                  <a href="contenido"><h4>{{ $personaje['nombre'] }}</h4></a>
+                  <a href={{route('detalle.personaje',$personaje['id'])}}><h4>{{ $personaje['nombre'] }}</h4></a>
                   {{ $personaje['descripcion'] }} 
                   <div class="post-options">
                     <div class="row">
@@ -76,7 +76,7 @@
                 </div>
                 <div class="down-content">
                   <span>Comic</span>
-                  <a href="contenido"><h4>{{ $comic['titulo'] }}</h4></a>
+                  <a href={{route('detalle.comic',$comic['id'])}}><h4>{{ $comic['titulo'] }}</h4></a>
                   {{ $comic['series_name'] }} 
                   <div class="post-options">
                     <div class="row">
