@@ -15,6 +15,14 @@ class GeneralController extends Controller
     }
 
     /**
+     * Raiz
+     * return redirect()->route('inicio');
+     */
+    public function vista(){
+        return view('details');
+    }
+
+    /**
      * inicio
      * consumir personajes de API para mostrar
      * en el inicio principal

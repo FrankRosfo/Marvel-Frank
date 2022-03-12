@@ -21,6 +21,8 @@ Route::get('/inicio',[GeneralController::class, 'inicio'])->middleware('auth')->
 
 Route::post('/resultados',[GeneralController::class, 'buscar'])->name('resultados');
 
+Route::post('/details',[GeneralController::class, 'vista'])->name('details');
+
 /*
 |--------------------------------------------------------------------------
 | Rutas Api / Rutas hacia la API-Marvel / personajes
