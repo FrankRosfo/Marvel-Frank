@@ -43,8 +43,8 @@ class PersonajesApiController extends Controller
      */
     public function detallePersonajes($id){
 
-        $comentarios = Comentarios::all();
-        $num_coment = Comentarios::count();
+        $comentarios = comentarios::all();
+        $num_coment = comentarios::count();
 
         // -- consumir detalles de personaje
         $cliente = new \GuzzleHttp\Client();    
