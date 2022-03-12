@@ -9,10 +9,10 @@
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="{{route('personajes',$page=1)}}">Personajes</a>
+    <a class="nav-link" href="{{route('personajes',1)}}">Personajes</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="{{route('comics',$page=1)}}">Comics</a>
+    <a class="nav-link" href="{{route('comics',1)}}">Comics</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="{{route('contacto')}}">Contacto</a>

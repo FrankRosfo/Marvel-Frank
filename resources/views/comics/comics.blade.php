@@ -7,10 +7,10 @@
     <a class="nav-link" href="{{route('inicio')}}">Inicio</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="{{route('personajes',$page=1)}}">Personajes</a>
+    <a class="nav-link" href="{{route('personajes',1)}}">Personajes</a>
   </li>
   <li class="nav-item active">
-    <a class="nav-link" href="{{route('comics',$c_page=1)}}">Comics
+    <a class="nav-link" href="{{route('comics',1)}}">Comics
       <span class="sr-only">(current)</span>
     </a>
   </li>
