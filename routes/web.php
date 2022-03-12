@@ -19,8 +19,6 @@ Route::get('/',[GeneralController::class, 'raiz'])->name('raiz');
 
 Route::get('/inicio',[GeneralController::class, 'inicio'])->middleware('auth')->name('inicio');
 
-Route::get('/inicio',[GeneralController::class, 'inicio'])->middleware('auth')->name('inicio');
-
 Route::post('/resultados',[GeneralController::class, 'buscar'])->name('resultados');
 
 /*
