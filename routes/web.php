@@ -21,8 +21,6 @@ Route::get('/inicio',[GeneralController::class, 'inicio'])->middleware('auth')->
 
 Route::post('/resultados',[GeneralController::class, 'buscar'])->name('resultados');
 
-Route::get('/details',[GeneralController::class, 'vista'])->name('details');
-
 /*
 |--------------------------------------------------------------------------
 | Rutas Api / Rutas hacia la API-Marvel / personajes
@@ -71,9 +69,9 @@ Route::get('/logout', [SessionController::class, 'destroy'])->middleware('auth')
 |--------------------------------------------------------------------------
 */
 
-Route::post('/coment', [PersonajesApiController::class, 'coment_personaje'])->name('comentar_personaje');
+Route::post('/comentar_personaje', [PersonajesApiController::class, 'coment_personaje'])->name('comentar_personaje');
 
-Route::post('/coment', [ComicsApiController::class, 'coment_comic'])->name('comentar_comic');
+Route::post('/comentar_comic', [ComicsApiController::class, 'coment_comic'])->name('comentar_comic');
 
 /*
 |--------------------------------------------------------------------------
