@@ -1,21 +1,200 @@
 @if(auth()->check())
-@extends('blog.template.details')
+@extends('template.fondo')
+@section('Logotipo')
+<a class="navbar-brand" href="{{route('inicio')}}"><h2>Marvel/Frank<em>.</em></h2></a>
+@endsection
 @section('Barra')
-<li class="nav-item active">
-  <a class="nav-link" href="1_sistemas">Detalles
-    <span class="sr-only">(current)</span>
-  </a>
-</li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{route('inicio')}}">Inicio
+      <span class="sr-only">(current)</span>
+    </a>
+  </li>
+  <li class="nav-item active">
+    <a class="nav-link" href="{{route('personajes',1)}}">Personajes
+      <span class="sr-only">(current)</span>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{route('comics',1)}}">Comics</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{route('contacto')}}">Contacto</a>
+  </li>
 @endsection
-@section('Imagen')
-<img src="assets/images/Image1.jpg" alt="">
-@endsection
-@section('Titulo')
-<span>Conceptos</span>
-<a><h4>Sistemas de Información</h4></a>
-<p>Un sistema de información es un conjunto de datos que interactúan entre sí con un fin común.
-<br><br>En informática, los sistemas de información ayudan a administrar, recolectar, recuperar, procesar, almacenar y distribuir información relevante para los procesos fundamentales y las particularidades de cada organización.
-<br><br>La importancia de un sistema de información radica en la eficiencia en la correlación de una gran cantidad de datos ingresados a través de procesos diseñados para cada área con el objetivo de producir información válida para la posterior toma de decisiones.
-</p>
+@section('Contenido')
+
+<!-- Page Content -->
+<!-- Banner Starts Here -->
+<div class="heading-page header-text">
+  <section class="page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="text-content">
+            <h4>Detalles del Post</h4>
+            <h2>¡Bienvenido!</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="blog-posts grid-system">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="all-blog-posts">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="blog-post">
+                <div class="blog-thumb">
+                  <img src="assets/images/Image1.jpg" alt="">
+                </div>
+                <div class="down-content">
+                  <span>Conceptos</span>
+                  <a><h4>Sistemas de Información</h4></a>
+                  <p>Un sistema de información es un conjunto de datos que interactúan entre sí con un fin común.
+                  <br><br>En informática, los sistemas de información ayudan a administrar, recolectar, recuperar, procesar, almacenar y distribuir información relevante para los procesos fundamentales y las particularidades de cada organización.
+                  <br><br>La importancia de un sistema de información radica en la eficiencia en la correlación de una gran cantidad de datos ingresados a través de procesos diseñados para cada área con el objetivo de producir información válida para la posterior toma de decisiones.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="sidebar-item comments">
+                <div class="sidebar-heading">
+                  <h2>3 comentarios</h2>
+                </div>
+                <div class="content">
+                  <ul>
+                    <li>
+                      <div class="author-thumb">
+                        <img src="assets/images/comment-author-01.jpg" alt="">
+                      </div>
+                      <div class="right-content">
+                        <h4>Charles Kate<span>May 16, 2020</span></h4>
+                        <p>Excelente contenido de información.</p>
+                      </div>
+                    </li>
+                    <li class="replied">
+                      <div class="author-thumb">
+                        <img src="assets/images/comment-author-02.jpg" alt="">
+                      </div>
+                      <div class="right-content">
+                        <h4>Thirteen Man<span>May 22, 2020</span></h4>
+                        <p>La información es clara sobre el tema muy bien.</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="author-thumb">
+                        <img src="assets/images/comment-author-03.jpg" alt="">
+                      </div>
+                      <div class="right-content">
+                        <h4>Belisimo Mama<span>May 16, 2020</span></h4>
+                        <p>Tener el conocimiento de esta información podria servirme en un futuro, gracias.</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="sidebar-item submit-comment">
+                <div class="sidebar-heading">
+                  <h2>Escribe un omentario</h2>
+                </div>
+                <div class="content">
+                  <form id="comment" action="comentar_personaje" method="post">
+                    <div class="row">
+                      <div class="col-md-12 col-sm-12">
+                        <fieldset>
+                          <input name="name" type="text" id="name" placeholder="Nombre" required="">
+                        </fieldset>
+                      </div>
+                      <div class="col-lg-12">
+                        <fieldset>
+                          <textarea name="message" rows="6" id="message" placeholder="Comentario" required=""></textarea>
+                        </fieldset>
+                      </div>
+                      <div class="col-lg-12">
+                        <fieldset>
+                          <button type="submit" id="form-submit" class="main-button">Enviar</button>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="sidebar">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="sidebar-item recent-posts">
+                <div class="sidebar-heading">
+                  <h2>&Uacute;ltimos Comentarios</h2>
+                </div>
+                <div class="content">
+                  <ul>
+                    <li><a>
+                      <h5>Interesante sitio web</h5>
+                      <span>Ene 28, 2022</span>
+                    </a></li>
+                    <li><a>
+                      <h5>¿Para pasar la materia cierto? XD</h5>
+                      <span>Ene 18, 2022</span>
+                    </a></li>
+                    <li><a>
+                      <h5>Me gusto el diseño esta muy interesante</h5>
+                      <span>Ene 10, 2022</span>
+                    </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="sidebar-item categories">
+                <div class="sidebar-heading">
+                  <h2>Trabajos Realizados</h2>
+                </div>
+                <div class="content">
+                  <ul>
+                    <li><a href="#">- Hobbies/F</a></li>
+                    <li><a href="#">- Uso Orientado a Objetos</a></li>
+                    <li><a href="#">- Juego Cl&aacute;sicos</a></li>
+                    <li><a href="#">- QSMN/F</a></li>
+                    <li><a href="#">- Batalla Naval</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="sidebar-item tags">
+                <div class="sidebar-heading">
+                  <h2>Lenguajes de Programaci&oacute;n</h2>
+                </div>
+                <div class="content">
+                  <ul>
+                    <li><a href="#">Java</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">Php</a></li>
+                    <li><a href="#">C++</a></li>
+                    <li><a href="#">C#</a></li>
+                    <li><a href="#">Laravel</a></li>
+                    <li><a href="#">C</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 @endsection
 @endif

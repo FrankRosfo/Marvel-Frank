@@ -55,7 +55,7 @@ Route::post('/registro', [RegisterController::class, 'guardar'])->name('registro
 
 /*
 |--------------------------------------------------------------------------
-| Rutas de login y logout / Rutas para el registro y guardar datos
+| Rutas de login y logout / Rutas para el logear y cerrar secion
 |--------------------------------------------------------------------------
 */
 
@@ -64,6 +64,16 @@ Route::get('/login', [SessionController::class, 'create'])->middleware('guest')-
 Route::post('/login', [SessionController::class, 'ingresar'])->name('login.ingresar');
 
 Route::get('/logout', [SessionController::class, 'destroy'])->middleware('auth')->name('login.destroy');
+
+/*
+|--------------------------------------------------------------------------
+| Rutas de comentarios / Rutas para comentar y guardar comentarios
+|--------------------------------------------------------------------------
+*/
+
+Route::post('/', [PersonajesApiController::class, 'coment_personaje'])->name('comentar_personaje');
+
+Route::post('/', [ComicsApiController::class, 'coment_comic'])->name('comentar_comic');
 
 /*
 |--------------------------------------------------------------------------

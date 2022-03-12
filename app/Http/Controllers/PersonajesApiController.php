@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\comentarios;
 
 class PersonajesApiController extends Controller
 {
@@ -42,6 +43,8 @@ class PersonajesApiController extends Controller
      */
     public function detallePersonajes($id){
 
+        $comentarios = comentarios::all();
+
         // -- consumir detalles de personaje
         $cliente = new \GuzzleHttp\Client();    
         $response = $cliente->request('GET', 'https://gateway.marvel.com:443/v1/public/characters/'.$id.'?ts=1&apikey=06ffa280d1bafc06d930b43d6d8dd14b&hash=afda8720864a69268e1e8bedd7a23b60');
@@ -61,6 +64,19 @@ class PersonajesApiController extends Controller
                 'comics_numero' => $personaje['comics']['available'],
             ];
         }
-        return view('personajes.personaje',['personaje' => $personajeIndividual, 'personajes' => $personajes]);
+        return view('personajes.personaje',['personaje' => $personajeIndividual, 'personajes' => $personajes, 'comentarios' => $comentarios]);
+    }
+
+    /**
+     * Comentar
+     * Guarda el comentario en una BD
+     */
+    public function coment_personaje(Request $request){
+        $comentarios = new comentarios();
+        $comentarios->Nombre = $request->name;
+        $comentarios->Comentario = $request->message;
+        $comentarios->Decha = datetime('Y-m-d H:i:s');
+        $comentarios->save();
+        return redirect()->route('detalle.personaje');
     }
 }

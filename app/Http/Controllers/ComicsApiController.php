@@ -49,6 +49,9 @@ class ComicsApiController extends Controller
      */
     public function detalleComics($id){
 
+        $comentarios = comentarios::all();
+        $num_coment = comentarios::count();
+
         // -- consumir detalles de personaje
         $cliente = new \GuzzleHttp\Client();    
         $response = $cliente->request('GET', 'https://gateway.marvel.com:443/v1/public/characters/'.$id.'?ts=1&apikey=06ffa280d1bafc06d930b43d6d8dd14b&hash=afda8720864a69268e1e8bedd7a23b60');
@@ -62,6 +65,7 @@ class ComicsApiController extends Controller
                 'id' => $comic['id'],
                 'titulo' => $comic['title'],
                 'n_paginas' => $comic['pageCount'],
+                'modificado' => $comic['modified'],
                 'imagen' => $comic['thumbnail']['path'],
                 'imagen_extension' => $comic['thumbnail']['extension'],
                 'series_name' => $comic['series']['name'],
@@ -74,6 +78,19 @@ class ComicsApiController extends Controller
                 ];
             } */
         }
-        return view('comics.comic',['comic' => $comicIndividual, 'comics' => $comics]);
+        return view('comics.comic',['comics' => $comicIndividual, 'comentarios' => $comentarios, 'registros' => $num_coment]);
+    }
+
+    /**
+     * Comentar
+     * Guarda el comentario en una BD
+     */
+    public function coment_comic(Request $request){
+        $comentarios = new comentarios();
+        $comentarios->Nombre = $request->name;
+        $comentarios->Comentario = $request->message;
+        $comentarios->Decha = datetime('Y-m-d H:i:s');
+        $comentarios->save();
+        return redirect()->route('detalle.comic');
     }
 }
