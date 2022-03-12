@@ -93,7 +93,7 @@
                     </li>
                     }
                     @endif
-                    @endfor
+                    @endforeach
                   </ul>
                 </div>
               </div>
