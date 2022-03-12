@@ -63,7 +63,7 @@ class GeneralController extends Controller
         $comics = [];
         $links = [];
 
-        foreach ($datos_comics['data']['results'] as $comic) {
+        foreach ($datos_comic['data']['results'] as $comic) {
             $comics[] = [
                 'id' => $comic['id'],
                 'titulo' => $comic['title'],
