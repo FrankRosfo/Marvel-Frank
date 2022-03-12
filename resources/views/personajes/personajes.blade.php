@@ -1,21 +1,21 @@
 @extends('template.fondo')
 @section('Logotipo')
-<a class="navbar-brand" href="{{route('inicio')}}"><h2>Marvel/Frank<em>.</em></h2></a>
+<a class="navbar-brand" href="http://marvel-frank.herokuapp.com/inicio" ><h2>Marvel/Frank<em>.</em></h2></a>
 @endsection
 @section('Barra')
   <li class="nav-item">
-    <a class="nav-link" href="{{route('inicio')}}">Inicio</a>
+    <a class="nav-link" href="http://marvel-frank.herokuapp.com/inicio">Inicio</a>
   </li>
   <li class="nav-item active">
-    <a class="nav-link" href="{{route('personajes',$page=1)}}">Personajes
+    <a class="nav-link" href="http://marvel-frank.herokuapp.com/personajes">Personajes
       <span class="sr-only">(current)</span>
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="{{route('comics',$c_page=1)}}">Comics</a>
+    <a class="nav-link" href="http://marvel-frank.herokuapp.com/comics">Comics</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="{{route('contacto')}}">Contacto</a>
+    <a class="nav-link" href="http://marvel-frank.herokuapp.com/contacto">Contacto</a>
   </li>
 @endsection
 @section('Contenido')
@@ -50,7 +50,7 @@
                   <img src="{{ $personaje['imagen'] }}.{{ $personaje['imagen_extension'] }}" alt="">
                 </div>
                 <div class="down-content">
-                  <span>Marvel</span>
+                  <span>Conceptos</span>
                   <a href="contenido"><h4>{{ $personaje['nombre'] }}</h4></a>
                   {{ $personaje['descripcion'] }} 
                   <div class="post-options">
