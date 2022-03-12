@@ -27,7 +27,7 @@ Route::post('/resultados',[GeneralController::class, 'buscar'])->name('resultado
 |--------------------------------------------------------------------------
 */
 
-Route::get('/personajes/{page}',[PersonajesApiController::class, 'personajes'])->middleware('auth')->name('personajes');
+Route::get('/personajes/{c_page}',[PersonajesApiController::class, 'personajes'])->middleware('auth')->name('personajes');
 
 Route::get('/detapersonajes/{id}',[PersonajesApiController::class, 'detallePersonajes'])->middleware('auth')->name('detalle.personaje');
 
@@ -73,8 +73,7 @@ Route::post('/mail', [MailController::class, 'getMail']);
 
 /*
 |--------------------------------------------------------------------------
-| Rutas de vistas / Rutas para ver las vistas (->middleware('auth') = 
-| validar estar registrado)
+| Rutas de vistas / Rutas para ver las vistas
 |--------------------------------------------------------------------------
 */
 
@@ -83,5 +82,5 @@ Route::get('/contacto', function () {
 })->middleware('auth')->name('contacto');
 
 Route::get('/datalles', function () {
-    return view('tamplate.details');
+    return view('details');
 })->middleware('auth')->name('detalles');
