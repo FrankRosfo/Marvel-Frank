@@ -16,7 +16,7 @@ class ComicsApiController extends Controller
 
         // -- consumir comics
         $cliente = new \GuzzleHttp\Client();    
-        $response = $cliente->request('GET', 'https://gateway.marvel.com:443/v1/public/comics?limit=10&offset='.$numero.'ts=1&apikey=06ffa280d1bafc06d930b43d6d8dd14b&hash=afda8720864a69268e1e8bedd7a23b60');
+        $response = $cliente->request('GET', 'https://gateway.marvel.com:443/v1/public/comics?limit=10&offset='.$numero.'&ts=1&apikey=06ffa280d1bafc06d930b43d6d8dd14b&hash=afda8720864a69268e1e8bedd7a23b60');
         $datos_comics = json_decode($response->getBody()->getContents(), true);
 
         // -- Recorrer elementos
