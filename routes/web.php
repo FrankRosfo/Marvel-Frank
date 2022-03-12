@@ -71,9 +71,9 @@ Route::get('/logout', [SessionController::class, 'destroy'])->middleware('auth')
 |--------------------------------------------------------------------------
 */
 
-Route::post('/', [PersonajesApiController::class, 'coment_personaje'])->name('comentar_personaje');
+Route::post('/coment', [PersonajesApiController::class, 'coment_personaje'])->name('comentar_personaje');
 
-Route::post('/', [ComicsApiController::class, 'coment_comic'])->name('comentar_comic');
+Route::post('/coment', [ComicsApiController::class, 'coment_comic'])->name('comentar_comic');
 
 /*
 |--------------------------------------------------------------------------
