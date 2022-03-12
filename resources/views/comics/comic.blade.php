@@ -47,12 +47,13 @@
             <div class="col-lg-12">
               <div class="blog-post">
                 <div class="blog-thumb">
-                  <img src="{{ $comics['imagen'] }}.{{ $comics['imagen_extension'] }}" alt="">
+                  <img src="{{ $comic['thumbnail']['path'] }}.{{ $comic['thumbnail']['extension'] }}" alt="">
                 </div>
                 <div class="down-content">
                   <span>Marvel</span>
-                  <a><h4>{{ $comics['titulo'] }}</h4></a>
-                  <p>{{ $comics['modificado'] }}</p>
+                  <a><h4>{{ $comic['title'] }}</h4></a>
+                  <p>{{ $comic['modified'] }}</p>
+                  <p>{{ $comic['pageCount'] }}</p>
                 </div>
               </div>
             </div>

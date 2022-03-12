@@ -65,7 +65,7 @@ class PersonajesApiController extends Controller
                 'comics_numero' => $personaje['comics']['available'],
             ];
         }
-        return view('personajes.personaje',['personaje' => $personajeIndividual, 'personajes' => $personajes, 'comentarios' => $comentarios, 'registros' => $num_coment]);
+        return view('personajes.personaje',['personaje' => $personajeIndividual, 'comentarios' => $comentarios, 'registros' => $num_coment]);
     }
 
     /**
