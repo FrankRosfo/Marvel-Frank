@@ -54,12 +54,12 @@ https://templatemo.com/tm-551-stand-blog
                         <li class="nav-item"> 
                             <a class="nav-link" href="{{route('login.destroy')}}">Cerrar Secion</a>
                         </li>
-                        <div class="sidebar-item search">
+                        <li class="sidebar-item search">
                             <form id="search_form" name="gs" method="post" action="{{route('resultados')}}">
                                 @csrf
                                 <input type="text" id="search" name="q" class="searchText" placeholder="Buscar..." autocomplete="on">
                             </form>
-                        </div>
+                        </li>
                     </ul>
                 </div>
             </div>

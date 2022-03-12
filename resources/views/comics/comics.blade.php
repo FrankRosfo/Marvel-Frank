@@ -6,11 +6,11 @@
   <li class="nav-item">
     <a class="nav-link" href="{{route('inicio')}}">Inicio</a>
   </li>
-  <li class="nav-item active">
+  <li class="nav-item">
     <a class="nav-link" href="{{route('personajes',$page=1)}}">Personajes</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{{route('comics',$page=1)}}">Comics
+  <li class="nav-item active">
+    <a class="nav-link" href="{{route('comics',$c_page=1)}}">Comics
       <span class="sr-only">(current)</span>
     </a>
   </li>
@@ -70,12 +70,12 @@
             @endforeach
             <div class="col-lg-12">
               <ul class="page-numbers">
-                @if($page>1)
-                <li><a href="{{route('personajes',$page-1)}}"><i class="fa fa-angle-double-left"></i></a></li>
+                @if($c_page>1)
+                <li><a href="{{route('personajes',$c_page-1)}}"><i class="fa fa-angle-double-left"></i></a></li>
                 @endif
-                  <li class="active"><a href="{{route('personajes',$page)}}">{{ $page }}</a></li>
-                @if($page<156)
-                <li><a href="{{route('personajes',$page+1)}}"><i class="fa fa-angle-double-right"></i></a></li>
+                  <li class="active"><a href="{{route('personajes',$c_page)}}">{{ $c_page }}</a></li>
+                @if($c_page<156)
+                <li><a href="{{route('personajes',$c_page+1)}}"><i class="fa fa-angle-double-right"></i></a></li>
                 @endif
               </ul>
             </div>
