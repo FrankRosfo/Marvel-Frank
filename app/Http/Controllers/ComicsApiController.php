@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Comentarios;
 
 class ComicsApiController extends Controller
 {
@@ -49,8 +50,8 @@ class ComicsApiController extends Controller
      */
     public function detalleComics($id){
 
-        $comentarios = comentarios::all();
-        $num_coment = comentarios::count();
+        $comentarios = Comentarios::all();
+        $num_coment = Comentarios::count();
 
         // -- consumir detalles de personaje
         $cliente = new \GuzzleHttp\Client();    
