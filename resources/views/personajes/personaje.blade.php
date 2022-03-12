@@ -104,7 +104,7 @@
                   <h2>Escribe un comentario</h2>
                 </div>
                 <div class="content">
-                  <form id="comment" action="{{route('comentar_personaje',$personaje['id'])}}" method="post">
+                  <form id="comment" action="{{route('comentar_personaje')}}" method="post">
                     <div class="row">
                       <div class="col-md-12 col-sm-12">
                         <fieldset>
