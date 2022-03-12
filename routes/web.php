@@ -81,6 +81,6 @@ Route::get('/contacto', function () {
     return view('contact');
 })->middleware('auth')->name('contacto');
 
-Route::get('/datalles', function () {
+Route::get('/datails', function () {
     return view('details');
-})->middleware('auth')->name('detalles');
+})->name('details');

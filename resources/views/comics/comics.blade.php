@@ -71,11 +71,11 @@
             <div class="col-lg-12">
               <ul class="page-numbers">
                 @if($c_page>1)
-                <li><a href="{{route('personajes',$c_page-1)}}"><i class="fa fa-angle-double-left"></i></a></li>
+                <li><a href="{{route('comics',$c_page-1)}}"><i class="fa fa-angle-double-left"></i></a></li>
                 @endif
-                  <li class="active"><a href="{{route('personajes',$c_page)}}">{{ $c_page }}</a></li>
+                  <li class="active"><a href="{{route('comics',$c_page)}}">{{ $c_page }}</a></li>
                 @if($c_page<156)
-                <li><a href="{{route('personajes',$c_page+1)}}"><i class="fa fa-angle-double-right"></i></a></li>
+                <li><a href="{{route('comics',$c_page+1)}}"><i class="fa fa-angle-double-right"></i></a></li>
                 @endif
               </ul>
             </div>
