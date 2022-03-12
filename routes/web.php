@@ -27,7 +27,7 @@ Route::post('/resultados',[GeneralController::class, 'buscar'])->name('resultado
 |--------------------------------------------------------------------------
 */
 
-Route::get('/personajes/{page}',[PersonajesApiController::class, 'personajes'])->name('personajes');
+Route::get('/personajes/{page}',[PersonajesApiController::class, 'personajes'])->middleware('auth')->name('personajes');
 
 Route::get('/detapersonajes/{id}',[PersonajesApiController::class, 'detallePersonajes'])->middleware('auth')->name('detalle.personaje');
 
@@ -37,7 +37,7 @@ Route::get('/detapersonajes/{id}',[PersonajesApiController::class, 'detallePerso
 |--------------------------------------------------------------------------
 */
 
-Route::get('/comics',[ComicsApiController::class, 'comics'])->middleware('auth')->name('comics');
+Route::get('/comics/{page}',[ComicsApiController::class, 'comics'])->middleware('auth')->name('comics');
 
 Route::get('detacomics/{id}',[ComicsApiController::class, 'detalleComics'])->middleware('auth')->name('detalle.comic');
 
