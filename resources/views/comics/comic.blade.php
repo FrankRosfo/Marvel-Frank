@@ -64,7 +64,7 @@
                 <div class="content">
                   <ul>
                     {{ $x = 1 }}
-                    @foreach($comentarios as $comentari)
+                    @foreach($comentarios as $comentario)
                     @if($i == 1)
                     {
                     <li>

@@ -5,9 +5,7 @@
 @endsection
 @section('Barra')
   <li class="nav-item">
-    <a class="nav-link" href="{{route('inicio')}}">Inicio
-      <span class="sr-only">(current)</span>
-    </a>
+    <a class="nav-link" href="{{route('inicio')}}">Inicio</a>
   </li>
   <li class="nav-item active">
     <a class="nav-link" href="{{route('personajes',1)}}">Personajes
@@ -31,7 +29,7 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="text-content">
-            <h4>Detalles del Post</h4>
+            <h4>Detalles del Perssonaje</h4>
             <h2>¡Bienvenido!</h2>
           </div>
         </div>
@@ -49,52 +47,53 @@
             <div class="col-lg-12">
               <div class="blog-post">
                 <div class="blog-thumb">
-                  <img src="assets/images/Image1.jpg" alt="">
+                  <img src="{{ $personajes['imagen'] }}.{{ $personajes['imagen_extension'] }}" alt="">
                 </div>
                 <div class="down-content">
-                  <span>Conceptos</span>
-                  <a><h4>Sistemas de Información</h4></a>
-                  <p>Un sistema de información es un conjunto de datos que interactúan entre sí con un fin común.
-                  <br><br>En informática, los sistemas de información ayudan a administrar, recolectar, recuperar, procesar, almacenar y distribuir información relevante para los procesos fundamentales y las particularidades de cada organización.
-                  <br><br>La importancia de un sistema de información radica en la eficiencia en la correlación de una gran cantidad de datos ingresados a través de procesos diseñados para cada área con el objetivo de producir información válida para la posterior toma de decisiones.
-                  </p>
+                  <span>Marvel</span>
+                  <a><h4>{{ $personajes['titulo'] }}</h4></a>
+                  <p>{{ $personajes['modificado'] }}</p>
                 </div>
               </div>
             </div>
             <div class="col-lg-12">
               <div class="sidebar-item comments">
                 <div class="sidebar-heading">
-                  <h2>3 comentarios</h2>
+                  <h2>{{ $registros }} comentarios</h2>
                 </div>
                 <div class="content">
                   <ul>
+                    {{ $x = 1 }}
+                    @foreach($comentarios as $comentario)
+                    @if($i == 1)
+                    {
                     <li>
+                      {{ $i = 2 }}
                       <div class="author-thumb">
                         <img src="assets/images/comment-author-01.jpg" alt="">
                       </div>
                       <div class="right-content">
-                        <h4>Charles Kate<span>May 16, 2020</span></h4>
-                        <p>Excelente contenido de información.</p>
+                        <h4>{{ $comentarios['Nombre'] }}<span>{{ $comentarios['Fecha'] }}</span></h4>
+                        <p>{{ $comentarios['Comentario'] }}</p>
                       </div>
                     </li>
-                    <li class="replied">
-                      <div class="author-thumb">
-                        <img src="assets/images/comment-author-02.jpg" alt="">
-                      </div>
-                      <div class="right-content">
-                        <h4>Thirteen Man<span>May 22, 2020</span></h4>
-                        <p>La información es clara sobre el tema muy bien.</p>
-                      </div>
-                    </li>
+                    }
+                    @endif
+                    @if($i == 2)
+                    {
                     <li>
+                      {{ $i = 1 }}
                       <div class="author-thumb">
-                        <img src="assets/images/comment-author-03.jpg" alt="">
+                        <img src="assets/images/comment-author-01.jpg" alt="">
                       </div>
                       <div class="right-content">
-                        <h4>Belisimo Mama<span>May 16, 2020</span></h4>
-                        <p>Tener el conocimiento de esta información podria servirme en un futuro, gracias.</p>
+                        <h4>{{ $comentarios['Nombre'] }}<span>{{ $comentarios['Fecha'] }}</span></h4>
+                        <p>{{ $comentarios['Comentario'] }}</p>
                       </div>
                     </li>
+                    }
+                    @endif
+                    @endfor
                   </ul>
                 </div>
               </div>
