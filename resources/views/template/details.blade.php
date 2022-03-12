@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
-
+    <link rel="icon" href="/assets/images/Icono.ico" >
+    
     <title>Marvel/Frank</title>
 
     <!-- Bootstrap core CSS -->

@@ -1,21 +1,21 @@
 @extends('template.fondo')
 @section('Logotipo')
-<a class="navbar-brand" href="inicio" ><h2>Marvel/Frank<em>.</em></h2></a>
+<a class="navbar-brand" href="{{route('inicio')}}"><h2>Marvel/Frank<em>.</em></h2></a>
 @endsection
 @section('Barra')
   <li class="nav-item">
-    <a class="nav-link" href="inicio">Inicio</a>
+    <a class="nav-link" href="{{route('inicio')}}">Inicio</a>
   </li>
   <li class="nav-item active">
-    <a class="nav-link" href="personajes">Personajes
+    <a class="nav-link" href="{{route('personajes',$page=1)}}">Personajes
       <span class="sr-only">(current)</span>
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="comics">Comics</a>
+    <a class="nav-link" href="{{route('comics',$page=1)}}">Comics</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="contacto">Contacto</a>
+    <a class="nav-link" href="{{route('contacto')}}">Contacto</a>
   </li>
 @endsection
 @section('Contenido')
@@ -29,7 +29,7 @@
         <div class="col-lg-12">
           <div class="text-content">
             <h4>Marvel</h4>
-            <h2>Personajes</h2>
+            <h2>Resultados</h2>
           </div>
         </div>
       </div>

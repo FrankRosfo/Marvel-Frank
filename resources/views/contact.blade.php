@@ -7,7 +7,7 @@
   <a class="nav-link" href="inicio">Inicio</a>
 </li>
 <li class="nav-item">
-  <a class="nav-link" href="personajes">Personajes</a>
+  <a class="nav-link" href="{{route('personajes',$page=1)}}">Personajes</a>
 </li>
 <li class="nav-item">
   <a class="nav-link" href="comics">Comics</a>

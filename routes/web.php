@@ -81,3 +81,7 @@ Route::post('/mail', [MailController::class, 'getMail']);
 Route::get('/contacto', function () {
     return view('contact');
 })->middleware('auth')->name('contacto');
+
+Route::get('/datalles', function () {
+    return view('tamplate.details');
+})->middleware('auth')->name('detalles');

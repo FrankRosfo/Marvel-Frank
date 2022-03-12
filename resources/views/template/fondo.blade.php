@@ -52,7 +52,7 @@ https://templatemo.com/tm-551-stand-blog
                     <ul class="navbar-nav ml-auto">
                         @yield('Barra')
                         <li class="nav-item"> 
-                            <a class="nav-link" href="http://marvel-frank.herokuapp.com/logout">Cerrar Secion</a>
+                            <a class="nav-link" href="{{route('logout')}}">Cerrar Secion</a>
                         </li>
                         <div class="sidebar-item search">
                             <form id="search_form" name="gs" method="post" action="{{route('resultados')}}">
