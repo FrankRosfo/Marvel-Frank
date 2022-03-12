@@ -71,12 +71,12 @@ class PersonajesApiController extends Controller
      * Comentar
      * Guarda el comentario en una BD
      */
-    public function coment_personaje(Request $request){
+    public function coment_personaje($id, Request $request){
         $comentarios = new comentarios();
         $comentarios->Nombre = $request->name;
         $comentarios->Comentario = $request->message;
         $comentarios->Decha = datetime('Y-m-d H:i:s');
         $comentarios->save();
-        return redirect()->route('detalle.personaje');
+        return redirect()->route('detalle.personaje', $id);
     }
 }
