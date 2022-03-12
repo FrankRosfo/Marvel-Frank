@@ -39,7 +39,7 @@ Route::get('/detapersonajes/{id}',[PersonajesApiController::class, 'detallePerso
 
 Route::get('/comics/{c_page}',[ComicsApiController::class, 'comics'])->middleware('auth')->name('comics');
 
-Route::get('detacomics/{id}',[ComicsApiController::class, 'detalleComics'])->middleware('auth')->name('detalle.comic');
+Route::get('/detacomics/{id}',[ComicsApiController::class, 'detalleComics'])->middleware('auth')->name('detalle.comic');
 
 /*
 |--------------------------------------------------------------------------
@@ -69,9 +69,9 @@ Route::get('/logout', [SessionController::class, 'destroy'])->middleware('auth')
 |--------------------------------------------------------------------------
 */
 
-Route::post('/comentar_personaje', [PersonajesApiController::class, 'coment_personaje'])->name('comentar_personaje');
+Route::post('/detapersonajes/{id}', [PersonajesApiController::class, 'coment_personaje'])->name('comentar_personaje');
 
-Route::post('/comentar_comic', [ComicsApiController::class, 'coment_comic'])->name('comentar_comic');
+Route::post('/detacomics/{id}', [ComicsApiController::class, 'coment_comic'])->name('comentar_comic');
 
 /*
 |--------------------------------------------------------------------------
