@@ -21,7 +21,7 @@ Route::get('/inicio',[GeneralController::class, 'inicio'])->middleware('auth')->
 
 Route::post('/resultados',[GeneralController::class, 'buscar'])->name('resultados');
 
-Route::post('/details',[GeneralController::class, 'vista'])->name('details');
+Route::get('/details',[GeneralController::class, 'vista'])->name('details');
 
 /*
 |--------------------------------------------------------------------------
@@ -85,4 +85,4 @@ Route::get('/contacto', function () {
 
 Route::get('/datails', function () {
     return view('details');
-})->name('details');
+})->name('detalles');
