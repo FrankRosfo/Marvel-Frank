@@ -51,11 +51,8 @@ class PersonajesApiController extends Controller
         $response = $cliente->request('GET', 'https://gateway.marvel.com:443/v1/public/characters/'.$id.'?ts=1&apikey=06ffa280d1bafc06d930b43d6d8dd14b&hash=afda8720864a69268e1e8bedd7a23b60');
         $personajeIndividual = json_decode($response->getBody()->getContents(), true);
 
-        // -- Recorrer elementos
-        $personajes = [];
-
         foreach ($personajeIndividual['data']['results'] as $personaje) {
-            $personajes[] = [
+            $personajes = [
                 'id' => $personaje['id'],
                 'nombre' => $personaje['name'],
                 'descripcion' => $personaje['description'],
@@ -65,7 +62,7 @@ class PersonajesApiController extends Controller
                 'comics_numero' => $personaje['comics']['available'],
             ];
         }
-        return view('personajes.personaje',['personaje' => $personajeIndividual, 'comentarios' => $comentarios, 'registros' => $num_coment]);
+        return view('personajes.personaje',['personajes' => $personajes, 'comentarios' => $comentarios, 'registros' => $num_coment]);
     }
 
     /**
