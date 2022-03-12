@@ -52,7 +52,7 @@
                 <div class="down-content">
                   <span>Marvel</span>
                   <a><h4>{{ $personaje['nombre'] }}</h4></a>
-                  <p> Fecha: {{ $personaje['modified'] }}</p>
+                  <p> Fecha: {{ $personaje['modificado'] }}</p>
                   <p> Comics: {{ $personaje['comics_numero'] }}</p>
                 </div>
               </div>
