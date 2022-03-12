@@ -63,8 +63,7 @@
                   <h2>{{ $registros }} comentarios</h2>
                 </div>
                 <div class="content">
-                  <ul>
-                    {{ $x = 1 }}
+                  <ul {{ $i = 1 }}>
                     @foreach($comentarios as $comentario)
                     @if($i == 1)
                     {
@@ -102,10 +101,11 @@
             <div class="col-lg-12">
               <div class="sidebar-item submit-comment">
                 <div class="sidebar-heading">
-                  <h2>Escribe un omentario</h2>
+                  <h2>Escribe un comentario</h2>
                 </div>
                 <div class="content">
                   <form id="comment" action="comentar_personaje" method="post">
+                    @csrf
                     <div class="row">
                       <div class="col-md-12 col-sm-12">
                         <fieldset>
