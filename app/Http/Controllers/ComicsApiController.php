@@ -79,7 +79,7 @@ class ComicsApiController extends Controller
                 ];
             } */
         }
-        return view('comics.comic',['comics' => $comics, 'comentarios' => $comentarios, 'registros' => $num_coment]);
+        return view('comics.comic',['comic' => $comics, 'comentarios' => $comentarios, 'registros' => $num_coment]);
     }
 
     /**

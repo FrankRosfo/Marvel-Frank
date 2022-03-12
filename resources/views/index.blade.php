@@ -1,6 +1,6 @@
 @extends('template.fondo')
 @section('Logotipo')
-<a class="navbar-brand" href="{{route('inicio')}}"><h2>Marvel/Frank<em>.</em></h2></a>
+<a class="navbar-brand" href="{{route('cita')}}"><h2>Marvel/Frank<em>.</em></h2></a>
 @endsection
 @section('Barra')
   <li class="nav-item active">
